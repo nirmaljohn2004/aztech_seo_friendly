@@ -13,12 +13,13 @@ import { ServicesSection } from "@/components/sections/services"
 import { ProcessSection } from "@/components/sections/process"
 import { BlogSection } from "@/components/sections/blog"
 import { ContactSection } from "@/components/sections/contact"
+import { FAQSection } from "@/components/sections/faq"
 import { Footer } from "@/components/sections/footer"
 import { FloatingButtons } from "@/components/floating-buttons"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[var(--bg-primary)]">
+    <main id="main" role="main" className="min-h-screen bg-[var(--bg-primary)]">
       <Navigation />
       <HeroSection />
       <StatsStrip />
@@ -32,6 +33,7 @@ export default function Home() {
       <ProcessSection />
       <BlogSection />
       <ContactSection />
+      <FAQSection />
       <Footer />
       <FloatingButtons />
     </main>

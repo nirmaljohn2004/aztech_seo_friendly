@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useReveal } from "@/hooks/use-reveal"
+import Image from "next/image"
 import { 
   ShoppingBag, Building2, Hotel, Heart, 
   GraduationCap, Landmark, PartyPopper, Trophy,
@@ -100,34 +102,16 @@ const industries = [
 
 export function SolutionsSection() {
   const [activeTab, setActiveTab] = useState("retail")
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLElement>(null)
+  const { ref, isVisible } = useReveal()
 
   const activeIndustry = industries.find(i => i.id === activeTab)!
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
 
   return (
     <section 
       ref={ref}
       id="solutions" 
       className={`section-padding bg-[var(--bg-primary)] reveal-section ${isVisible ? "visible" : ""}`}
-      aria-label="Solutions by industry"
+      aria-label="LED Screen Solutions by Industry"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         {/* Header - left aligned */}
@@ -168,12 +152,15 @@ export function SolutionsSection() {
           <div className="relative flex flex-col gap-6 lg:gap-8">
             {/* Dynamic Industry Image Header */}
             <div className="relative w-full aspect-video md:aspect-[21/9] rounded-[var(--radius-lg)] overflow-hidden bg-[var(--bg-tertiary)] shadow-[var(--shadow-card)] group cursor-pointer">
-              <img 
+              <Image 
                 key={activeIndustry.id} 
                 src={activeIndustry.image} 
                 alt={`${activeIndustry.title} LED display installations`} 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 loading="lazy"
+                decoding="async"
+                width={1200}
+                height={514}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               

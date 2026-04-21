@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { ArrowUpRight } from "lucide-react"
+import { useReveal } from "@/hooks/use-reveal"
+import Image from "next/image"
 
 const filters = [
   "All",
@@ -12,8 +14,6 @@ const filters = [
   "Government",
   "Events",
 ]
-
-
 
 const projects = [
   { name: "ADNOC Headquarters", category: "LED Screens", location: "Abu Dhabi", filter: ["LED Screens", "Government"], image: "/images/proj_adnoc_1774784409133.png" },
@@ -41,36 +41,18 @@ const aspectRatios = ["4/3", "1/1", "16/9", "4/3", "1/1", "16/9"]
 
 export function PortfolioSection() {
   const [activeFilter, setActiveFilter] = useState("All")
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLElement>(null)
+  const { ref, isVisible } = useReveal()
 
   const filteredProjects = activeFilter === "All" 
     ? projects 
     : projects.filter(p => p.filter.includes(activeFilter))
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
 
   return (
     <section 
       ref={ref}
       id="projects" 
       className={`section-padding bg-[var(--bg-primary)] reveal-section ${isVisible ? "visible" : ""}`}
-      aria-label="Featured projects"
+      aria-label="Aztech LED Projects Portfolio UAE"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         {/* Header */}
@@ -110,11 +92,14 @@ export function PortfolioSection() {
               style={{ aspectRatio: aspectRatios[index % aspectRatios.length] }}
             >
               {/* Project image */}
-              <img 
+              <Image 
                 src={project.image}
                 alt={`${project.name} LED screen installation in ${project.location}`}
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
+                width={600}
+                height={450}
               />
               
               {/* Hover overlay */}

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, FormEvent } from "react"
 import { MapPin, Phone, Mail, Clock, ArrowRight, CheckCircle } from "lucide-react"
+import { useReveal } from "@/hooks/use-reveal"
 
 const serviceOptions = [
   "Select a service...",
@@ -48,27 +49,9 @@ const sourceOptions = [
 ]
 
 export function ContactSection() {
-  const [isVisible, setIsVisible] = useState(false)
+  const { ref, isVisible } = useReveal()
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const ref = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -86,7 +69,7 @@ export function ContactSection() {
       ref={ref}
       id="contact" 
       className={`section-padding bg-[var(--bg-primary)] reveal-section ${isVisible ? "visible" : ""}`}
-      aria-label="Contact us"
+      aria-label="Contact Aztech LED Dubai — Get a Free Quote"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         {/* Header */}

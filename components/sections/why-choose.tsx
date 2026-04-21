@@ -1,5 +1,6 @@
 "use client"
 
+import { useReveal } from "@/hooks/use-reveal"
 import { useEffect, useRef, useState } from "react"
 import { Calendar, Users, Landmark, Package, Wrench, Award } from "lucide-react"
 
@@ -37,25 +38,7 @@ const features = [
 ]
 
 export function WhyChooseSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const { ref, isVisible } = useReveal()
 
   return (
     <section 

@@ -2,18 +2,22 @@
 
 import { useEffect, useRef, useState } from "react"
 import { ArrowRight } from "lucide-react"
+import { useReveal } from "@/hooks/use-reveal"
+import Image from "next/image"
 
 const posts = [
   {
     title: "Indoor vs Outdoor LED Screens: Which Do You Actually Need?",
+    slug: "indoor-vs-outdoor-led-screens",
     category: "Buying Guide",
-    readTime: "5 min read",
+    readTime: "6 min read",
     date: "Jan 2025",
     excerpt: "The choice between indoor and outdoor LED isn't just about weatherproofing. Brightness, pixel pitch, viewing distance, and content type all play a role. Here is how to decide.",
     image: "/images/blog_compare.png"
   },
   {
     title: "Pixel Pitch Explained: Choosing the Right Resolution for Your Space",
+    slug: "pixel-pitch-explained",
     category: "Technical Guide",
     readTime: "7 min read",
     date: "Dec 2024",
@@ -22,8 +26,9 @@ const posts = [
   },
   {
     title: "Top 5 LED Display Trends Dominating Dubai in 2025",
+    slug: "led-display-trends-dubai-2025",
     category: "Industry Insight",
-    readTime: "4 min read",
+    readTime: "5 min read",
     date: "Feb 2025",
     excerpt: "Transparent LED, kinetic screens, and AI-driven content management are reshaping how Dubai businesses use digital displays. What's worth investing in right now?",
     image: "/images/blog_trends.png"
@@ -31,32 +36,14 @@ const posts = [
 ]
 
 export function BlogSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const { ref, isVisible } = useReveal()
 
   return (
     <section 
       ref={ref}
       id="blog" 
       className={`section-padding bg-[var(--bg-secondary)] reveal-section ${isVisible ? "visible" : ""}`}
-      aria-label="Blog and resources"
+      aria-label="LED Screen Buying Guides and Industry Insights"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         {/* Header */}
@@ -79,14 +66,19 @@ export function BlogSection() {
               style={{ transitionDelay: `${index * 50}ms` }}
             >
               {/* Blog Image */}
-              <div className="relative aspect-[16/9] bg-[var(--bg-tertiary)] overflow-hidden">
-                <img 
-                  src={post.image} 
-                  alt={post.title} 
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
+              <a href={`/blog/${post.slug}`} aria-label={`Read article: ${post.title}`} tabIndex={-1}>
+                <div className="relative aspect-[16/9] bg-[var(--bg-tertiary)] overflow-hidden">
+                  <Image 
+                    src={post.image} 
+                    alt={post.title} 
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={450}
+                  />
+                </div>
+              </a>
               
               <div className="p-6">
                 <span className="inline-block font-sans text-[0.7rem] font-medium px-[10px] py-[3px] bg-[var(--accent-light)] text-[var(--accent)] rounded-[var(--radius-full)] mb-3">
@@ -94,7 +86,7 @@ export function BlogSection() {
                 </span>
                 
                 <h3 className="font-sans text-[1.05rem] font-semibold text-[var(--text-primary)] leading-[1.4] mb-2 line-clamp-2 group-hover:text-[var(--accent)] transition-colors">
-                  {post.title}
+                  <a href={`/blog/${post.slug}`} className="hover:underline">{post.title}</a>
                 </h3>
                 
                 <p className="font-sans text-[0.88rem] text-[var(--text-secondary)] leading-[1.6] line-clamp-3 mb-4">
@@ -106,7 +98,8 @@ export function BlogSection() {
                     {post.date} · {post.readTime}
                   </span>
                   <a 
-                    href="#" 
+                    href={`/blog/${post.slug}`}
+                    aria-label={`Read full article: ${post.title}`}
                     className="inline-flex items-center gap-1 font-sans text-[0.85rem] font-medium text-[var(--accent)] hover:underline"
                   >
                     Read Article
@@ -121,7 +114,7 @@ export function BlogSection() {
         {/* CTA */}
         <div className="text-center mt-10">
           <a
-            href="#"
+            href="/blog/indoor-vs-outdoor-led-screens"
             className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-[1.5px] border-[var(--accent)] text-[var(--accent)] font-sans text-[0.9rem] font-semibold rounded-[var(--radius-sm)] hover:bg-[var(--accent)] hover:text-white transition-all duration-200"
           >
             View All Articles

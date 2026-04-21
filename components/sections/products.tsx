@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useReveal } from "@/hooks/use-reveal"
+import Image from "next/image"
 import { 
   Monitor, Sun, Layers, Sparkles, 
   CircleDot, Grid3x3, Square, LayoutGrid,
@@ -37,32 +39,14 @@ const tagColors: Record<string, string> = {
 }
 
 export function ProductsSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const { ref, isVisible } = useReveal()
 
   return (
     <section 
       ref={ref}
       id="products" 
       className={`section-padding bg-[var(--bg-secondary)] reveal-section ${isVisible ? "visible" : ""}`}
-      aria-label="Our products"
+      aria-label="LED Screen Products by Aztech UAE"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         {/* Header */}
@@ -85,10 +69,14 @@ export function ProductsSection() {
             { name: "Slim Poster LED", image: "/images/product_poster_1774782355639.png" },
           ].map((featured) => (
             <div key={featured.name} className="relative aspect-square rounded-[var(--radius-md)] overflow-hidden group shadow-[var(--shadow-card)]">
-              <img 
+              <Image 
                 src={featured.image} 
                 alt={`${featured.name} - high quality product photography`} 
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+                width={400}
+                height={400}
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5 translate-y-2 group-hover:translate-y-0 transition-transform">
                 <h3 className="font-sans text-[1.05rem] font-semibold text-white">{featured.name}</h3>
@@ -107,11 +95,14 @@ export function ProductsSection() {
             >
               {/* Product Image */}
               <div className="relative aspect-video overflow-hidden bg-[var(--bg-tertiary)]">
-                 <img 
+                 <Image 
                    src={product.image}
                    alt={product.name}
                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy"
+                   decoding="async"
+                   width={400}
+                   height={225}
                  />
                  <div className="absolute top-3 right-3">
                    <span className={`inline-block font-sans text-[0.68rem] font-bold px-[10px] py-[3px] rounded-[var(--radius-full)] shadow-sm ${tagColors[product.tag]} bg-white/90 backdrop-blur-sm border`}>

@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Zap, Package, Shield, Headphones, ArrowRight } from "lucide-react"
+import { useReveal } from "@/hooks/use-reveal"
+import Image from "next/image"
 
 const achievements = [
   { icon: Zap, title: "In-House Team", subtitle: "Design to installation" },
@@ -11,32 +13,14 @@ const achievements = [
 ]
 
 export function AboutSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.12 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const { ref, isVisible } = useReveal()
 
   return (
     <section 
       ref={ref}
       id="about" 
       className={`section-padding bg-[var(--bg-primary)] reveal-section ${isVisible ? "visible" : ""}`}
-      aria-label="About Aztech"
+      aria-label="About Aztech LED General Trading LLC"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         <div className="grid lg:grid-cols-[52%_48%] gap-12 lg:gap-20 items-start">
@@ -75,11 +59,14 @@ export function AboutSection() {
           <div>
             {/* About image */}
             <div className="relative aspect-[4/3] rounded-[var(--radius-md)] mb-4 overflow-hidden">
-              <img 
+              <Image 
                 src="/images/about_team_install_1774782278140.png"
                 alt="Professional office team collaborating on LED display projects"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
+                width={800}
+                height={600}
               />
               <div className="absolute top-4 right-4 bg-[var(--accent)] text-white font-sans text-[0.7rem] font-medium px-[10px] py-1 rounded-[2px]">
                 Est. Dubai, UAE

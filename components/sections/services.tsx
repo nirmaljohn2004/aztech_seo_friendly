@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Check } from "lucide-react"
+import { useReveal } from "@/hooks/use-reveal"
+import Image from "next/image"
 
 const services = [
   {
@@ -47,25 +49,7 @@ const services = [
 ]
 
 export function ServicesSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const { ref, isVisible } = useReveal()
 
   return (
     <section 
@@ -119,12 +103,12 @@ export function ServicesSection() {
                 
                 {/* Service image */}
                 <div className={`aspect-[4/3] lg:aspect-auto relative overflow-hidden ${service.imagePosition === "left" ? "lg:col-start-1" : ""}`}>
-                  <img 
+                  <Image 
                     src={service.image}
                     alt={`${service.title} - LED screen services in UAE`}
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
-                  />
+                   fill/>
                 </div>
               </div>
             </div>

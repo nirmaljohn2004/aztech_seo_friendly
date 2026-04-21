@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useReveal } from "@/hooks/use-reveal"
 
 const stats = [
   { number: 20, suffix: "+", label: "Years in UAE Market" },
@@ -10,7 +11,7 @@ const stats = [
 ]
 
 function useCountUp(end: number, duration: number, start: boolean) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(end)
 
   useEffect(() => {
     if (!start) return
@@ -29,6 +30,8 @@ function useCountUp(end: number, duration: number, start: boolean) {
       }
     }
     
+    // Reset to 0 before animating
+    setCount(0)
     requestAnimationFrame(animate)
   }, [end, duration, start])
 
@@ -56,26 +59,7 @@ function StatItem({ stat, isVisible }: { stat: typeof stats[0]; isVisible: boole
 }
 
 export function StatsStrip() {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.3 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const { ref, isVisible } = useReveal()
 
   return (
     <section 

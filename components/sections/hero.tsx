@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Check } from "lucide-react"
+import Image from "next/image"
 
 const trustBadges = [
   "In-house installation team",
@@ -21,7 +22,7 @@ export function HeroSection() {
     <section 
       id="home" 
       className="relative min-h-screen bg-[var(--bg-primary)] overflow-hidden"
-      aria-label="Hero"
+      aria-label="Aztech LED — Dubai LED Screen Supplier Hero"
     >
       {/* Background decorative A */}
       <div 
@@ -85,12 +86,14 @@ export function HeroSection() {
             <div className="flex flex-wrap gap-3 mb-7">
               <a
                 href="#contact"
+                aria-label="Get a free LED screen quote from Aztech LED Dubai"
                 className="inline-flex items-center px-7 py-[14px] bg-[var(--accent)] text-white font-sans text-[0.9rem] font-semibold rounded-[var(--radius-sm)] hover:bg-[var(--accent-hover)] hover:-translate-y-[2px] hover:shadow-[0_8px_20px_rgba(27,58,92,0.3)] transition-all duration-200"
               >
                 Get a Free Quote
               </a>
               <a
                 href="#projects"
+                aria-label="View Aztech LED project portfolio"
                 className="inline-flex items-center px-7 py-[14px] bg-transparent border-[1.5px] border-[var(--border-medium)] text-[var(--text-body)] font-sans text-[0.9rem] font-semibold rounded-[var(--radius-sm)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all duration-200"
               >
                 View Our Projects
@@ -111,11 +114,14 @@ export function HeroSection() {
           {/* Right side - Visual block */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[400px] lg:max-w-none aspect-[3/4] rounded-[4px] overflow-hidden">
-              <img 
+              <Image 
                 src="/images/hero_led_wall_1774782256673.png"
-                alt="Large LED video wall display in a modern commercial space showcasing vibrant digital content"
+                alt="Large LED video wall display in a modern Dubai commercial space"
                 className="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
                 fetchPriority="high"
+                width={1200}
+                height={1600}
               />
               {/* Overlay gradient for text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/20 to-transparent" />

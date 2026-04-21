@@ -1,21 +1,24 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { ProductsDropdown } from "./products-dropdown"
 import { SolutionsDropdown } from "./solutions-dropdown"
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#products", label: "Products", hasDropdown: true, dropdownType: "products" },
-  { href: "#solutions", label: "Solutions", hasDropdown: true, dropdownType: "solutions" },
-  { href: "#projects", label: "Projects" },
-  { href: "#blog", label: "Blog" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#products", label: "Products", hasDropdown: true, dropdownType: "products" },
+  { href: "/#solutions", label: "Solutions", hasDropdown: true, dropdownType: "solutions" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 export function MainNav() {
+  const pathname = usePathname()
+  const isDarkPage = pathname?.startsWith("/blog")
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
@@ -50,12 +53,12 @@ export function MainNav() {
       >
         <div className="h-[72px] md:h-[72px] px-[var(--section-pad-x)] flex items-center justify-between max-w-[1920px] mx-auto">
           {/* Logo */}
-          <a href="#home" className="flex flex-col">
+          <a href="/" className="flex flex-col">
             <div className="flex items-baseline gap-0.5">
-              <span className="font-serif text-[22px] font-bold text-[var(--text-primary)]">AZTECH</span>
+              <span className={`font-serif text-[22px] font-bold ${(!isScrolled && isDarkPage) ? 'text-white' : 'text-[var(--text-primary)]'}`}>AZTECH</span>
               <span className="font-sans text-[14px] font-semibold text-[var(--accent)] tracking-[0.06em]"> LED</span>
             </div>
-            <span className="font-sans text-[9px] font-normal text-[var(--text-muted)] tracking-[0.1em] uppercase">
+            <span className={`font-sans text-[9px] font-normal tracking-[0.1em] uppercase ${(!isScrolled && isDarkPage) ? 'text-white/70' : 'text-[var(--text-muted)]'}`}>
               General Trading LLC
             </span>
           </a>
@@ -71,7 +74,7 @@ export function MainNav() {
               >
                 <a
                   href={link.href}
-                  className="flex items-center gap-1 font-sans text-[0.875rem] font-medium text-[var(--text-body)] hover:text-[var(--accent)] transition-colors duration-200 relative group py-2"
+                  className={`flex items-center gap-1 font-sans text-[0.875rem] font-medium transition-colors duration-200 relative group py-2 ${(!isScrolled && isDarkPage) ? 'text-white/80 hover:text-white' : 'text-[var(--text-body)] hover:text-[var(--accent)]'}`}
                 >
                   {link.label}
                   {link.hasDropdown && (
@@ -101,9 +104,9 @@ export function MainNav() {
             aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-[var(--text-primary)]" />
+              <X className={`w-6 h-6 ${(!isScrolled && isDarkPage) ? 'text-white' : 'text-[var(--text-primary)]'}`} />
             ) : (
-              <Menu className="w-6 h-6 text-[var(--text-primary)]" />
+              <Menu className={`w-6 h-6 ${(!isScrolled && isDarkPage) ? 'text-white' : 'text-[var(--text-primary)]'}`} />
             )}
           </button>
         </div>
