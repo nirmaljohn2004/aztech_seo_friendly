@@ -42,7 +42,7 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="bg-white pt-20 border-t border-[var(--border-light)]">
+    <footer className="bg-[var(--bg-primary)] pt-20 border-t border-[var(--border-light)]">
       <div className="px-[var(--section-pad-x)]">
         <div className="max-w-[var(--container-max)] mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 pb-12">
@@ -168,7 +168,7 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gray-50 border-t border-[var(--border-light)]">
+      <div className="bg-[var(--bg-primary)] border-t border-[var(--border-light)]">
         <div className="px-[var(--section-pad-x)] py-6">
           <div className="max-w-[var(--container-max)] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-center md:text-left">
             <p className="font-sans text-[0.8rem] font-medium text-[var(--text-secondary)]">

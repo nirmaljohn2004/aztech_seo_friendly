@@ -42,17 +42,17 @@ export function BlogSection() {
     <section 
       ref={ref}
       id="blog" 
-      className={`section-padding bg-[var(--bg-secondary)] reveal-section ${isVisible ? "visible" : ""}`}
+      className={`section-padding bg-[var(--accent)] reveal-section ${isVisible ? "visible" : ""}`}
       aria-label="LED Screen Buying Guides and Industry Insights"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <p className="eyebrow mb-3">LED KNOWLEDGE HUB</p>
-          <h2 className="font-serif text-[clamp(2rem,3.5vw,3rem)] font-bold leading-[1.15] text-[var(--text-primary)] mb-4">
+          <p className="eyebrow !text-white/80 mb-3 tracking-[0.2em]">LED KNOWLEDGE HUB</p>
+          <h2 className="font-serif text-[clamp(2rem,3.5vw,3rem)] font-bold leading-[1.15] text-white mb-4">
             Insights & Buying Guides
           </h2>
-          <p className="font-sans text-[1rem] leading-[1.75] text-[var(--text-secondary)] max-w-[600px]">
+          <p className="font-sans text-[1rem] leading-[1.75] text-white/70 max-w-[600px]">
             Practical advice on LED screen selection, installation and maintenance — written for UAE buyers.
           </p>
         </div>
@@ -62,7 +62,7 @@ export function BlogSection() {
           {posts.map((post, index) => (
             <article 
               key={post.title}
-              className="bg-white rounded-[var(--radius-md)] border border-[var(--border-light)] overflow-hidden group hover:shadow-[var(--shadow-hover)] transition-shadow duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-[var(--radius-md)] border border-white/10 overflow-hidden group hover:border-white/30 hover:bg-white/10 transition-all duration-300"
               style={{ transitionDelay: `${index * 50}ms` }}
             >
               {/* Blog Image */}
@@ -81,26 +81,26 @@ export function BlogSection() {
               </a>
               
               <div className="p-6">
-                <span className="inline-block font-sans text-[0.7rem] font-medium px-[10px] py-[3px] bg-[var(--accent-light)] text-[var(--accent)] rounded-[var(--radius-full)] mb-3">
+                <span className="inline-block font-sans text-[0.7rem] font-medium px-[10px] py-[3px] bg-white/10 text-white border border-white/10 rounded-[var(--radius-full)] mb-3">
                   {post.category}
                 </span>
                 
-                <h3 className="font-sans text-[1.05rem] font-semibold text-[var(--text-primary)] leading-[1.4] mb-2 line-clamp-2 group-hover:text-[var(--accent)] transition-colors">
-                  <a href={`/blog/${post.slug}`} className="hover:underline">{post.title}</a>
+                <h3 className="font-sans text-[1.05rem] font-semibold text-white leading-[1.4] mb-2 line-clamp-2 transition-colors">
+                  <a href={`/blog/${post.slug}`} className="hover:text-white/80 transition-colors">{post.title}</a>
                 </h3>
                 
-                <p className="font-sans text-[0.88rem] text-[var(--text-secondary)] leading-[1.6] line-clamp-3 mb-4">
+                <p className="font-sans text-[0.88rem] text-white/70 leading-[1.6] line-clamp-3 mb-4">
                   {post.excerpt}
                 </p>
                 
-                <div className="flex items-center justify-between">
-                  <span className="font-sans text-[0.75rem] text-[var(--text-muted)]">
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="font-sans text-[0.75rem] text-white/50">
                     {post.date} · {post.readTime}
                   </span>
                   <a 
                     href={`/blog/${post.slug}`}
                     aria-label={`Read full article: ${post.title}`}
-                    className="inline-flex items-center gap-1 font-sans text-[0.85rem] font-medium text-[var(--accent)] hover:underline"
+                    className="inline-flex items-center gap-1 font-sans text-[0.85rem] font-medium text-white hover:text-white/80 transition-colors"
                   >
                     Read Article
                     <ArrowRight className="w-4 h-4" />
@@ -115,7 +115,7 @@ export function BlogSection() {
         <div className="text-center mt-10">
           <a
             href="/blog/indoor-vs-outdoor-led-screens"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-[1.5px] border-[var(--accent)] text-[var(--accent)] font-sans text-[0.9rem] font-semibold rounded-[var(--radius-sm)] hover:bg-[var(--accent)] hover:text-white transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-[1.5px] border-white/20 text-white font-sans text-[0.9rem] font-semibold rounded-[var(--radius-sm)] hover:bg-white hover:text-[var(--accent)] transition-all duration-300"
           >
             View All Articles
             <ArrowRight className="w-4 h-4" />

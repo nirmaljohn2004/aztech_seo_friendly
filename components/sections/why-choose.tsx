@@ -43,17 +43,17 @@ export function WhyChooseSection() {
   return (
     <section 
       ref={ref}
-      className={`section-padding bg-[var(--bg-secondary)] reveal-section ${isVisible ? "visible" : ""}`}
+      className={`section-padding bg-[var(--accent)] reveal-section ${isVisible ? "visible" : ""}`}
       aria-label="Why choose Aztech"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="eyebrow mb-3">THE AZTECH DIFFERENCE</p>
-          <h2 className="font-serif text-[clamp(2rem,3.5vw,3rem)] font-bold leading-[1.15] text-[var(--text-primary)] mb-4">
+          <p className="eyebrow !text-white/80 mb-3 tracking-[0.2em]">THE AZTECH DIFFERENCE</p>
+          <h2 className="font-serif text-[clamp(2rem,3.5vw,3rem)] font-bold leading-[1.15] text-white mb-4">
             Why Serious Buyers Choose Aztech
           </h2>
-          <p className="font-sans text-[1rem] leading-[1.75] text-[var(--text-secondary)] max-w-[600px] mx-auto">
+          <p className="font-sans text-[1rem] leading-[1.75] text-white/70 max-w-[600px] mx-auto">
             With dozens of LED suppliers in Dubai, here is what makes Aztech the choice for clients who cannot afford to get it wrong.
           </p>
         </div>
@@ -63,18 +63,18 @@ export function WhyChooseSection() {
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className="bg-white p-8 rounded-[var(--radius-md)] border border-[var(--border-light)] shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hover)] hover:border-[var(--border-accent)] transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm p-8 rounded-[var(--radius-md)] border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 group"
               style={{ transitionDelay: `${index * 50}ms` }}
             >
-              <div className="w-12 h-12 bg-[var(--accent-light)] rounded-[8px] flex items-center justify-center mb-5">
-                <feature.icon className="w-6 h-6 text-[var(--accent)]" aria-hidden="true" />
+              <div className="w-12 h-12 bg-white/10 rounded-[8px] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-6 h-6 text-white" aria-hidden="true" />
               </div>
               
-              <h3 className="font-sans text-[1.05rem] font-semibold text-[var(--text-primary)] mb-3">
+              <h3 className="font-sans text-[1.05rem] font-semibold text-white mb-3">
                 {feature.title}
               </h3>
               
-              <p className="font-sans text-[0.9rem] leading-[1.7] text-[var(--text-secondary)]">
+              <p className="font-sans text-[0.9rem] leading-[1.7] text-white/70">
                 {feature.description}
               </p>
             </div>

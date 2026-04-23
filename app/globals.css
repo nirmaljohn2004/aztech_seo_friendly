@@ -11,12 +11,12 @@
   --bg-dark: #1A1A1C;
   --bg-dark-2: #111113;
 
-  /* ── ACCENT — DEEP SLATE BLUE ── */
-  --accent: #1B3A5C;
-  --accent-hover: #254D7A;
-  --accent-light: #EBF0F6;
-  --accent-mid: #4A7BA7;
-  --accent-dark-visible: #5B9FD4;
+  /* ── ACCENT — BRAND BLUE ── */
+  --accent: #1C4A97;
+  --accent-hover: #153A7A;
+  --accent-light: #E8EDF4;
+  --accent-mid: #5E83C3;
+  --accent-dark-visible: #4974BA;
 
   /* ── COPPER/BRONZE SECONDARY ACCENT ── */
   --copper: #B5722A;
