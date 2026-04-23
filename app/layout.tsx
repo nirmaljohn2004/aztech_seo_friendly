@@ -3,21 +3,21 @@ import { Playfair_Display, DM_Sans, DM_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const playfairDisplay = Playfair_Display({ 
+const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
   weight: ['700', '800'],
   variable: '--font-serif',
   display: 'swap',
 })
 
-const dmSans = DM_Sans({ 
+const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
   variable: '--font-sans',
   display: 'swap',
 })
 
-const dmMono = DM_Mono({ 
+const dmMono = DM_Mono({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--font-mono',
@@ -155,7 +155,9 @@ export default function RootLayout({
                 "name": "Aztech LED General Trading LLC",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.png"
+                  "url": "https://aztech-seo-friendly.vercel.app/icon.svg",
+                  "width": 512,
+                  "height": 512
                 }
               }
             })

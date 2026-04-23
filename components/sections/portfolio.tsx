@@ -124,13 +124,12 @@ export function PortfolioSection() {
           ))}
         </div>
 
-        {/* Load more */}
         <div className="text-center mt-12">
           <a
-            href="#"
+            href="#contact"
             className="inline-flex items-center px-6 py-3 bg-transparent border-[1.5px] border-[var(--accent)] text-[var(--accent)] font-sans text-[0.9rem] font-semibold rounded-[var(--radius-sm)] hover:bg-[var(--accent)] hover:text-white transition-all duration-200"
           >
-            View All Projects
+            Request Full Portfolio
           </a>
         </div>
       </div>

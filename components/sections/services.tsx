@@ -108,7 +108,9 @@ export function ServicesSection() {
                     alt={`${service.title} - LED screen services in UAE`}
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
-                   fill/>
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>

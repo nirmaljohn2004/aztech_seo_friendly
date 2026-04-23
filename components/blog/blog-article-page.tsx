@@ -72,12 +72,11 @@ export function BlogArticlePage({ post }: Props) {
       <div className="px-[var(--section-pad-x)] -mt-[100px] relative z-20">
         <div className="max-w-[1000px] mx-auto">
           <div className="relative aspect-[2/1] md:aspect-[21/9] bg-[var(--bg-tertiary)] rounded-[24px] overflow-hidden shadow-[0_32px_64px_-12px_rgba(0,0,0,0.2)] ring-1 ring-black/5">
-            <img
+            <Image
               src={post.image}
               alt={post.imageAlt}
               className="absolute inset-0 w-full h-full object-cover"
-              loading="eager"
-              fetchPriority="high"
+              priority
               width={1200}
               height={600}
             />
@@ -161,12 +160,11 @@ export function BlogArticlePage({ post }: Props) {
                   className="group flex flex-col bg-white rounded-3xl border border-[var(--border-light)] overflow-hidden hover:shadow-2xl hover:shadow-[var(--accent)]/5 hover:-translate-y-1 transition-all duration-400"
                 >
                   <div className="relative aspect-[16/9] overflow-hidden bg-[var(--bg-tertiary)]">
-                    <img
+                    <Image
                       src={rel.image}
                       alt={rel.imageAlt}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-in-out"
                       loading="lazy"
-                      decoding="async"
                       width={800}
                       height={450}
                     />

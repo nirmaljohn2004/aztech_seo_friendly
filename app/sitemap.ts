@@ -1,61 +1,39 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const BASE = 'https://aztech-seo-friendly.vercel.app'
+  const now = new Date('2026-04-23')
+
   return [
+    // ── Main page ─────────────────────────────────────────────
     {
-      url: 'https://aztech-seo-friendly.vercel.app/',
-      lastModified: new Date('2025-04-20'),
+      url: `${BASE}/`,
+      lastModified: now,
       changeFrequency: 'monthly',
       priority: 1,
     },
+    // ── Blog article pages ─────────────────────────────────────
+    // NOTE: Google ignores fragment (#) URLs in sitemaps, so only
+    // real standalone pages are listed here. Sections like
+    // #products, #solutions are part of the homepage above.
     {
-      url: 'https://aztech-seo-friendly.vercel.app/#products',
-      lastModified: new Date('2025-04-20'),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://aztech-seo-friendly.vercel.app/#solutions',
-      lastModified: new Date('2025-04-20'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://aztech-seo-friendly.vercel.app/#projects',
-      lastModified: new Date('2025-04-20'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://aztech-seo-friendly.vercel.app/#blog',
-      lastModified: new Date('2025-04-20'),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: 'https://aztech-seo-friendly.vercel.app/#contact',
-      lastModified: new Date('2025-04-20'),
-      changeFrequency: 'yearly',
-      priority: 0.6,
-    },
-    // ── Blog article pages ──────────────────────────────────
-    {
-      url: 'https://aztech-seo-friendly.vercel.app/blog/indoor-vs-outdoor-led-screens',
-      lastModified: new Date('2025-01-15'),
+      url: `${BASE}/blog/indoor-vs-outdoor-led-screens`,
+      lastModified: new Date('2026-01-15'),
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
-      url: 'https://aztech-seo-friendly.vercel.app/blog/pixel-pitch-explained',
-      lastModified: new Date('2024-12-10'),
+      url: `${BASE}/blog/pixel-pitch-explained`,
+      lastModified: new Date('2026-02-10'),
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
-      url: 'https://aztech-seo-friendly.vercel.app/blog/led-display-trends-dubai-2025',
-      lastModified: new Date('2025-02-20'),
+      url: `${BASE}/blog/led-display-trends-dubai-2025`,
+      lastModified: new Date('2026-02-20'),
       changeFrequency: 'monthly',
       priority: 0.85,
     },
   ]
 }
+

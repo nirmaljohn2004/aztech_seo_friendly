@@ -1,5 +1,3 @@
-"use client"
-
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/sections/hero"
 import { StatsStrip } from "@/components/sections/stats-strip"

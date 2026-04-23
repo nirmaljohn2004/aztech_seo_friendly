@@ -47,10 +47,10 @@ export function AboutSection() {
             </p>
             
             <a 
-              href="#" 
+              href="#contact" 
               className="inline-flex items-center gap-2 font-sans text-[0.9rem] font-medium text-[var(--accent)] hover:underline"
             >
-              Read Our Full Company Story
+              Discuss Your Project With Us
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

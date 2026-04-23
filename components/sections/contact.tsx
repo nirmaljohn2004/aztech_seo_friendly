@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect, useRef, useState, FormEvent } from "react"
-import { MapPin, Phone, Mail, Clock, ArrowRight, CheckCircle } from "lucide-react"
+import { useRef, useState, FormEvent } from "react"
+import { MapPin, Phone, Mail, Clock, ArrowRight, CheckCircle, AlertCircle } from "lucide-react"
 import { useReveal } from "@/hooks/use-reveal"
 
 const serviceOptions = [
@@ -52,16 +52,44 @@ export function ContactSection() {
   const { ref, isVisible } = useReveal()
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
+  const formRef = useRef<HTMLFormElement>(null)
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
+    setErrorMsg(null)
+
+    const form = formRef.current!
+    const data = {
+      name:     (form.elements.namedItem('name')    as HTMLInputElement).value.trim(),
+      company:  (form.elements.namedItem('company') as HTMLInputElement).value.trim(),
+      email:    (form.elements.namedItem('email')   as HTMLInputElement).value.trim(),
+      phone:    (form.elements.namedItem('phone')   as HTMLInputElement).value.trim(),
+      service:  (form.elements.namedItem('service') as HTMLSelectElement).value,
+      location: (form.elements.namedItem('location') as HTMLSelectElement).value,
+      budget:   (form.elements.namedItem('budget')  as HTMLSelectElement).value,
+      source:   (form.elements.namedItem('source')  as HTMLSelectElement).value,
+      message:  (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim(),
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      const json = await res.json()
+      if (!res.ok) {
+        setErrorMsg(json.error ?? 'Something went wrong. Please try again.')
+      } else {
+        setIsSubmitted(true)
+      }
+    } catch {
+      setErrorMsg('Network error. Please check your connection and try again.')
+    } finally {
       setIsSubmitting(false)
-      setIsSubmitted(true)
-    }, 1500)
+    }
   }
 
   return (
@@ -198,7 +226,7 @@ export function ContactSection() {
                 </a>
               </div>
             ) : (
-              <form onSubmit={handleSubmit}>
+              <form ref={formRef} onSubmit={handleSubmit} noValidate>
                 <h3 className="font-sans text-[1.2rem] font-semibold text-[var(--text-primary)] mb-6">
                   Send Us a Project Enquiry
                 </h3>
@@ -347,13 +375,21 @@ export function ContactSection() {
                     />
                   </div>
                   
+                  {/* Error message */}
+                  {errorMsg && (
+                    <div className="flex items-start gap-2 bg-red-50 border border-red-200 text-red-700 rounded-[var(--radius-sm)] px-4 py-3">
+                      <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
+                      <p className="font-sans text-[0.85rem] leading-[1.5]">{errorMsg}</p>
+                    </div>
+                  )}
+
                   {/* Submit */}
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full py-4 bg-[var(--accent)] text-white font-sans text-[0.9rem] font-semibold tracking-[0.04em] rounded-[var(--radius-sm)] hover:bg-[var(--accent-hover)] hover:-translate-y-[1px] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? "Sending..." : "Send My Enquiry"}
+                    {isSubmitting ? "Sending…" : "Send My Enquiry"}
                   </button>
                   
                   <p className="font-sans text-[0.78rem] text-[var(--text-muted)] text-center">
