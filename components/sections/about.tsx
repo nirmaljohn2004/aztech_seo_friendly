@@ -60,13 +60,14 @@ export function AboutSection() {
             {/* About image */}
             <div className="relative aspect-[4/3] rounded-[var(--radius-md)] mb-4 overflow-hidden">
               <Image 
-                src="/images/about_team_install_1774782278140.png"
+                src="/images/about_team_install_1774782278140.webp"
                 alt="Professional office team collaborating on LED display projects"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
                 width={800}
                 height={600}
+                sizes="(max-width: 1024px) 100vw, 40vw"
               />
               <div className="absolute top-4 right-4 bg-[var(--accent)] text-white font-sans text-[0.7rem] font-medium px-[10px] py-1 rounded-[2px]">
                 Est. Dubai, UAE

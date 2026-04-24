@@ -12,7 +12,7 @@ const services = [
     description: "We supply the full spectrum of LED screen types — indoor, outdoor, specialty, rental and niche displays. All products come with manufacturer warranty, locally-stocked for fast dispatch across UAE. We advise on the right pixel pitch, brightness, and panel configuration for your specific environment and viewing distance.",
     specs: ["P1.2 to P10 pixel pitch range", "1000–8000 nits brightness", "UAE-stocked, fast dispatch"],
     imagePosition: "right",
-    image: "/images/service_components_1774782522853.png",
+    image: "/images/service_components_1774782522853.webp",
   },
   {
     tag: "Design & Fabrication",
@@ -20,7 +20,7 @@ const services = [
     description: "Not every space fits a standard screen. Our in-house design team creates LED solutions for any shape, size, and architectural constraint — curved screens, spherical displays, custom cabinets, and creative installations. We produce technical drawings, structural calculations, and fabrication — all under one roof.",
     specs: ["Custom shapes: curves, spheres, cylinders", "Structural drawings provided", "Full fabrication in-house"],
     imagePosition: "left",
-    image: "/images/service_software_1774782562265.png",
+    image: "/images/service_software_1774782562265.webp",
   },
   {
     tag: "Installation & Commissioning",
@@ -28,7 +28,7 @@ const services = [
     description: "Our certified installation teams manage the complete process: site survey, structural mount design, cable routing, screen assembly, controller configuration, and final commissioning test. We work to schedule, we work clean, and we don't leave until the screen performs perfectly.",
     specs: ["Site survey included", "Certified installation engineers", "Full commissioning & handover"],
     imagePosition: "right",
-    image: "/images/service_install_1774782503987.png",
+    image: "/images/service_install_1774782503987.webp",
   },
   {
     tag: "Architectural Lighting",
@@ -36,7 +36,7 @@ const services = [
     description: "Our roots are in architectural lighting — transforming the faces of buildings, bridges, hotels and villas with programmable LED profiles and facade illumination. We have lit some of Dubai's most recognizable addresses: Downtown Dubai, Sheikh Hamdan Palace, IKEA Festival City, and Dubai Mall exteriors.",
     specs: ["DALI & DMX programmable", "IP67/IP68 rated profiles", "Custom color temperature"],
     imagePosition: "left",
-    image: "/images/service_facade_1774782541436.png",
+    image: "/images/service_facade_1774782541436.webp",
   },
   {
     tag: "After-Sales & AMC",
@@ -44,7 +44,7 @@ const services = [
     description: "LED screens are long-term investments. We protect that investment with Annual Maintenance Contracts (AMC) covering preventive maintenance, emergency callouts, spare parts, and remote monitoring. Our UAE-based support team responds within 24 hours to any fault — minimizing downtime for your business.",
     specs: ["AMC contracts available", "24hr response SLA", "Spare parts in UAE stock"],
     imagePosition: "right",
-    image: "/images/service_maintenance_1774782580512.png",
+    image: "/images/service_maintenance_1774782580512.webp",
   },
 ]
 

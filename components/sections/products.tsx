@@ -11,24 +11,24 @@ import {
 } from "lucide-react"
 
 const products = [
-  { icon: Monitor, name: "HD LED Display", description: "Ultra-high resolution, pixel pitch from P1.2", tag: "Indoor", image: "/images/prod_1.png" },
-  { icon: Tv, name: "Indoor LED Display", description: "Vibrant colors for retail, corporate and hospitality", tag: "Indoor", image: "/images/prod_2.png" },
-  { icon: Sun, name: "Outdoor DIP LED Display", description: "Weatherproof, 5000 nits brightness for harsh UAE sun", tag: "Outdoor", image: "/images/prod_3.png" },
-  { icon: Maximize, name: "Outdoor SMD LED Display", description: "Wide viewing angle, excellent color uniformity", tag: "Outdoor", image: "/images/prod_4.png" },
-  { icon: Box, name: "Die-Cast Aluminum LED", description: "Lightweight fast-deploy panels, IP65 rated", tag: "Outdoor", image: "/images/prod_5.png" },
-  { icon: Layers, name: "Curtain / Mesh LED", description: "Semi-transparent for building facades and events", tag: "Specialty", image: "/images/prod_6.png" },
-  { icon: Grid3x3, name: "Front Service LED", description: "Front-access maintenance for built-in wall installations", tag: "Indoor", image: "/images/prod_7.png" },
-  { icon: Square, name: "Floor LED Display", description: "Load-bearing interactive floor screens, 1000kg/m² rated", tag: "Specialty", image: "/images/prod_8.png" },
-  { icon: LayoutGrid, name: "Poster LED Display", description: "Slim standalone portrait LED for promotions", tag: "Indoor", image: "/images/prod_9.png" },
-  { icon: Sparkles, name: "Transparent Glass LED", description: "See-through film or glass LED for storefronts", tag: "Specialty", image: "/images/prod_10.png" },
-  { icon: CircleDot, name: "Perimeter LED Display", description: "Sports stadium perimeter advertising boards", tag: "Outdoor", image: "/images/prod_11.png" },
-  { icon: Layers, name: "Curve LED Display", description: "Flexible curved screens for creative installations", tag: "Specialty", image: "/images/prod_12.png" },
-  { icon: Globe, name: "Spherical LED Display", description: "360° globe displays for exhibitions and lobbies", tag: "Specialty", image: "/images/prod_13.png" },
-  { icon: Sparkles, name: "Creative Shape LED", description: "Any irregular shape — cylinders, letters, cubes", tag: "Specialty", image: "/images/prod_14.png" },
-  { icon: Building, name: "Gas Price LED Display", description: "UAE petrol station price boards, RTA compliant", tag: "Niche", image: "/images/prod_15.png" },
-  { icon: Car, name: "Taxi Rooftop LED", description: "Dubai taxi advertising, RTA-approved systems", tag: "Niche", image: "/images/prod_16.png" },
-  { icon: TrafficCone, name: "Traffic LED Display", description: "Road information, variable message signs", tag: "Niche", image: "/images/prod_17.png" },
-  { icon: Monitor, name: "LCD Video Wall", description: "Seamless LCD panels for control rooms, lobbies, command centers", tag: "Indoor", image: "/images/prod_18.png" },
+  { icon: Monitor, name: "HD LED Display", description: "Ultra-high resolution, pixel pitch from P1.2", tag: "Indoor", image: "/images/prod_1.webp" },
+  { icon: Tv, name: "Indoor LED Display", description: "Vibrant colors for retail, corporate and hospitality", tag: "Indoor", image: "/images/prod_2.webp" },
+  { icon: Sun, name: "Outdoor DIP LED Display", description: "Weatherproof, 5000 nits brightness for harsh UAE sun", tag: "Outdoor", image: "/images/prod_3.webp" },
+  { icon: Maximize, name: "Outdoor SMD LED Display", description: "Wide viewing angle, excellent color uniformity", tag: "Outdoor", image: "/images/prod_4.webp" },
+  { icon: Box, name: "Die-Cast Aluminum LED", description: "Lightweight fast-deploy panels, IP65 rated", tag: "Outdoor", image: "/images/prod_5.webp" },
+  { icon: Layers, name: "Curtain / Mesh LED", description: "Semi-transparent for building facades and events", tag: "Specialty", image: "/images/prod_6.webp" },
+  { icon: Grid3x3, name: "Front Service LED", description: "Front-access maintenance for built-in wall installations", tag: "Indoor", image: "/images/prod_7.webp" },
+  { icon: Square, name: "Floor LED Display", description: "Load-bearing interactive floor screens, 1000kg/m² rated", tag: "Specialty", image: "/images/prod_8.webp" },
+  { icon: LayoutGrid, name: "Poster LED Display", description: "Slim standalone portrait LED for promotions", tag: "Indoor", image: "/images/prod_9.webp" },
+  { icon: Sparkles, name: "Transparent Glass LED", description: "See-through film or glass LED for storefronts", tag: "Specialty", image: "/images/prod_10.webp" },
+  { icon: CircleDot, name: "Perimeter LED Display", description: "Sports stadium perimeter advertising boards", tag: "Outdoor", image: "/images/prod_11.webp" },
+  { icon: Layers, name: "Curve LED Display", description: "Flexible curved screens for creative installations", tag: "Specialty", image: "/images/prod_12.webp" },
+  { icon: Globe, name: "Spherical LED Display", description: "360° globe displays for exhibitions and lobbies", tag: "Specialty", image: "/images/prod_13.webp" },
+  { icon: Sparkles, name: "Creative Shape LED", description: "Any irregular shape — cylinders, letters, cubes", tag: "Specialty", image: "/images/prod_14.webp" },
+  { icon: Building, name: "Gas Price LED Display", description: "UAE petrol station price boards, RTA compliant", tag: "Niche", image: "/images/prod_15.webp" },
+  { icon: Car, name: "Taxi Rooftop LED", description: "Dubai taxi advertising, RTA-approved systems", tag: "Niche", image: "/images/prod_16.webp" },
+  { icon: TrafficCone, name: "Traffic LED Display", description: "Road information, variable message signs", tag: "Niche", image: "/images/prod_17.webp" },
+  { icon: Monitor, name: "LCD Video Wall", description: "Seamless LCD panels for control rooms, lobbies, command centers", tag: "Indoor", image: "/images/prod_18.webp" },
 ]
 
 const tagColors: Record<string, string> = {
@@ -63,10 +63,10 @@ export function ProductsSection() {
         {/* Featured Products Visual Row */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {[
-            { name: "Indoor Display Panels", image: "/images/product_indoor_1774782297798.png" },
-            { name: "Outdoor Billboard Modules", image: "/images/product_outdoor_1774782316663.png" },
-            { name: "Transparent Glass LED", image: "/images/product_transparent_1774782335491.png" },
-            { name: "Slim Poster LED", image: "/images/product_poster_1774782355639.png" },
+            { name: "Indoor Display Panels", image: "/images/product_indoor_1774782297798.webp" },
+            { name: "Outdoor Billboard Modules", image: "/images/product_outdoor_1774782316663.webp" },
+            { name: "Transparent Glass LED", image: "/images/product_transparent_1774782335491.webp" },
+            { name: "Slim Poster LED", image: "/images/product_poster_1774782355639.webp" },
           ].map((featured) => (
             <div key={featured.name} className="relative aspect-square rounded-[var(--radius-md)] overflow-hidden group shadow-[var(--shadow-card)]">
               <Image 
@@ -77,6 +77,7 @@ export function ProductsSection() {
                 decoding="async"
                 width={400}
                 height={400}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5 translate-y-2 group-hover:translate-y-0 transition-transform">
                 <h3 className="font-sans text-[1.05rem] font-semibold text-white">{featured.name}</h3>
@@ -103,6 +104,7 @@ export function ProductsSection() {
                    decoding="async"
                    width={400}
                    height={225}
+                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                  />
                  <div className="absolute top-3 right-3">
                    <span className={`inline-block font-sans text-[0.68rem] font-bold px-[10px] py-[3px] rounded-[var(--radius-full)] shadow-sm ${tagColors[product.tag]} bg-white/90 backdrop-blur-sm border`}>

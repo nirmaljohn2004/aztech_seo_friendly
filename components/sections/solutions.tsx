@@ -18,7 +18,7 @@ const industries = [
     title: "Retail & Shopping Malls",
     description: "High-footfall retail environments demand displays that stop shoppers mid-step. Aztech has installed LED screens across UAE's busiest malls and hypermarkets — from entrance fascias to in-aisle promotion screens, digital price boards to checkout displays. Our retail installations are configured for maximum brightness under strong artificial lighting and designed for easy content management.",
     clients: "Carrefour, Union Coop, Wafi Mall, Deira City Centre, Avenue Mall, Center Mall Bur Dubai, Grand Hyper, Grandoose Supermarket, Smart Baby Supermarket, Splash Ajman.",
-    image: "/images/portfolio_mall_1774782384373.png",
+    image: "/images/portfolio_mall_1774782384373.webp",
     useCases: [],
   },
   {
@@ -40,7 +40,7 @@ const industries = [
     title: "Hospitality & Hotels",
     description: "Hotels, resorts and restaurants need displays that enhance the guest experience without disrupting the ambiance. Aztech has transformed hotel lobbies, restaurant feature walls, pool-area displays and event hall screens across the UAE hospitality sector — balancing visual impact with aesthetic sensitivity.",
     clients: "Rove Hotels, Goldstate Hotel, Oberoi Hotel, Rotana, Astoria Club, Red Tomato Restaurant.",
-    image: "/images/portfolio_hotel_1774782425884.png",
+    image: "/images/portfolio_hotel_1774782425884.webp",
     useCases: [],
   },
   {
@@ -51,7 +51,7 @@ const industries = [
     title: "Healthcare & Clinics",
     description: "Healthcare environments demand displays that communicate clearly, queue efficiently, and perform reliably 24/7. Aztech has installed patient information systems, queue management displays, wayfinding screens and pharmacy digital boards at UAE healthcare facilities.",
     clients: "Zulekha Hospital, Cosmos Clinic, Al Marana Pharmacy Delma Mall.",
-    image: "/images/proj_zulekha.png",
+    image: "/images/proj_zulekha.webp",
     useCases: [],
   },
   {
@@ -62,7 +62,7 @@ const industries = [
     title: "Education & Schools",
     description: "From interactive classroom displays to auditorium presentation screens, Aztech equips UAE educational institutions with LED solutions that enhance learning environments. Our education screens are calibrated for comfortable viewing in variable ambient light conditions.",
     clients: "GEMS Schools UAE.",
-    image: "/images/proj_gems.png",
+    image: "/images/proj_gems.webp",
     useCases: [],
   },
   {
@@ -73,7 +73,7 @@ const industries = [
     title: "Government & Public Sector",
     description: "Government projects demand the highest standard of reliability, compliance, and professionalism. Aztech's track record includes some of the UAE's most prestigious institutional LED installations — from federal headquarters to municipal offices and royal palaces.",
     clients: "ADNOC Headquarters, RTA Dubai, Ajman Municipality, Parliament Palace Abu Dhabi, Sheikh Hamdan Palace, Sheikh Sayed Road.",
-    image: "/images/portfolio_gov_1774782461132.png",
+    image: "/images/portfolio_gov_1774782461132.webp",
     useCases: [],
   },
   {
@@ -95,7 +95,7 @@ const industries = [
     title: "Sports & Stadiums",
     description: "Stadium installations require the highest brightness, widest viewing angles, and structural-grade mounting. Aztech has delivered perimeter LED systems and large-format outdoor screens for UAE sports venues, engineered to perform under intense sunlight and in front of thousands of spectators.",
     clients: "Dubai Cricket Stadium, Fujairah P4 Outdoor, Astoria Club.",
-    image: "/images/portfolio_stadium_1774782441665.png",
+    image: "/images/portfolio_stadium_1774782441665.webp",
     useCases: ["Perimeter Signage", "Jumbotrons", "Scoreboards"],
   },
 ]
@@ -161,6 +161,7 @@ export function SolutionsSection() {
                 decoding="async"
                 width={1200}
                 height={514}
+                sizes="(max-width: 1024px) 100vw, 80vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               

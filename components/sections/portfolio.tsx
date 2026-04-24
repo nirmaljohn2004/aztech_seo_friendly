@@ -16,24 +16,24 @@ const filters = [
 ]
 
 const projects = [
-  { name: "ADNOC Headquarters", category: "LED Screens", location: "Abu Dhabi", filter: ["LED Screens", "Government"], image: "/images/proj_adnoc_1774784409133.png" },
-  { name: "RTA Dubai", category: "Government", location: "Dubai", filter: ["Government"], image: "/images/proj_rta_1774784465970.png" },
-  { name: "Dubai Cricket Stadium", category: "Sports", location: "Dubai", filter: ["Outdoor", "LED Screens"], image: "/images/proj_cricket_1774784549601.png" },
-  { name: "Wafi Mall", category: "Retail", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_wafi_1774784593202.png" },
-  { name: "Dubai Mall", category: "Retail", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_dubaimall_1774784635796.png" },
-  { name: "Zulekha Hospital", category: "Healthcare", location: "Dubai", filter: ["LED Screens", "LCD & Video Wall"], image: "/images/proj_zulekha.png" },
-  { name: "Rove Hotels Group", category: "Hospitality", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_rove.png" },
-  { name: "Parliament Palace Abu Dhabi", category: "Government", location: "Abu Dhabi", filter: ["Government", "LED Screens"], image: "/images/proj_parliament.png" },
-  { name: "GEMS Schools UAE", category: "Education", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_gems.png" },
-  { name: "Carrefour UAE", category: "Retail", location: "Multiple", filter: ["LED Screens"], image: "/images/proj_carrefour.png" },
-  { name: "Expo 2020 Dubai", category: "Events", location: "Dubai", filter: ["Events", "LED Screens"], image: "/images/proj_expo.png" },
-  { name: "Oberoi Hotel", category: "Hospitality", location: "Dubai", filter: ["LED Screens", "LED Lighting"], image: "/images/proj_oberoi.png" },
-  { name: "Dubai Media City P1.86", category: "Corporate", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_mediacity.png" },
-  { name: "Ajman Municipality", category: "Government", location: "Ajman", filter: ["Government", "LED Screens"], image: "/images/proj_ajman.png" },
-  { name: "Fujairah Aviation Club", category: "Events", location: "Fujairah", filter: ["Events", "Outdoor"], image: "/images/proj_fujairah.png" },
-  { name: "Sheikh Hamdan Palace", category: "Government", location: "Dubai", filter: ["Government", "LED Lighting"], image: "/images/proj_hamdan.png" },
-  { name: "Curve Screen Oman", category: "International", location: "Oman", filter: ["LED Screens"], image: "/images/proj_oman.png" },
-  { name: "Dubai Cricket Stadium Perimeter", category: "Sports", location: "Dubai", filter: ["Outdoor"], image: "/images/proj_perimeter.png" },
+  { name: "ADNOC Headquarters", category: "LED Screens", location: "Abu Dhabi", filter: ["LED Screens", "Government"], image: "/images/proj_adnoc_1774784409133.webp" },
+  { name: "RTA Dubai", category: "Government", location: "Dubai", filter: ["Government"], image: "/images/proj_rta_1774784465970.webp" },
+  { name: "Dubai Cricket Stadium", category: "Sports", location: "Dubai", filter: ["Outdoor", "LED Screens"], image: "/images/proj_cricket_1774784549601.webp" },
+  { name: "Wafi Mall", category: "Retail", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_wafi_1774784593202.webp" },
+  { name: "Dubai Mall", category: "Retail", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_dubaimall_1774784635796.webp" },
+  { name: "Zulekha Hospital", category: "Healthcare", location: "Dubai", filter: ["LED Screens", "LCD & Video Wall"], image: "/images/proj_zulekha.webp" },
+  { name: "Rove Hotels Group", category: "Hospitality", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_rove.webp" },
+  { name: "Parliament Palace Abu Dhabi", category: "Government", location: "Abu Dhabi", filter: ["Government", "LED Screens"], image: "/images/proj_parliament.webp" },
+  { name: "GEMS Schools UAE", category: "Education", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_gems.webp" },
+  { name: "Carrefour UAE", category: "Retail", location: "Multiple", filter: ["LED Screens"], image: "/images/proj_carrefour.webp" },
+  { name: "Expo 2020 Dubai", category: "Events", location: "Dubai", filter: ["Events", "LED Screens"], image: "/images/proj_expo.webp" },
+  { name: "Oberoi Hotel", category: "Hospitality", location: "Dubai", filter: ["LED Screens", "LED Lighting"], image: "/images/proj_oberoi.webp" },
+  { name: "Dubai Media City P1.86", category: "Corporate", location: "Dubai", filter: ["LED Screens"], image: "/images/proj_mediacity.webp" },
+  { name: "Ajman Municipality", category: "Government", location: "Ajman", filter: ["Government", "LED Screens"], image: "/images/proj_ajman.webp" },
+  { name: "Fujairah Aviation Club", category: "Events", location: "Fujairah", filter: ["Events", "Outdoor"], image: "/images/proj_fujairah.webp" },
+  { name: "Sheikh Hamdan Palace", category: "Government", location: "Dubai", filter: ["Government", "LED Lighting"], image: "/images/proj_hamdan.webp" },
+  { name: "Curve Screen Oman", category: "International", location: "Oman", filter: ["LED Screens"], image: "/images/proj_oman.webp" },
+  { name: "Dubai Cricket Stadium Perimeter", category: "Sports", location: "Dubai", filter: ["Outdoor"], image: "/images/proj_perimeter.webp" },
 ]
 
 // Create varied aspect ratios for masonry effect
@@ -100,6 +100,7 @@ export function PortfolioSection() {
                 decoding="async"
                 width={600}
                 height={450}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               
               {/* Hover overlay */}

@@ -13,7 +13,7 @@ const posts = [
     readTime: "6 min read",
     date: "Jan 2025",
     excerpt: "The choice between indoor and outdoor LED isn't just about weatherproofing. Brightness, pixel pitch, viewing distance, and content type all play a role. Here is how to decide.",
-    image: "/images/blog_compare.png"
+    image: "/images/blog_compare.webp"
   },
   {
     title: "Pixel Pitch Explained: Choosing the Right Resolution for Your Space",
@@ -22,7 +22,7 @@ const posts = [
     readTime: "7 min read",
     date: "Dec 2024",
     excerpt: "P1.86 vs P2.5 vs P4 — what do these numbers mean and how do they affect what your audience sees? A plain-English guide for procurement managers and fit-out contractors.",
-    image: "/images/blog_pixel.png"
+    image: "/images/blog_pixel.webp"
   },
   {
     title: "Top 5 LED Display Trends Dominating Dubai in 2025",
@@ -31,7 +31,7 @@ const posts = [
     readTime: "5 min read",
     date: "Feb 2025",
     excerpt: "Transparent LED, kinetic screens, and AI-driven content management are reshaping how Dubai businesses use digital displays. What's worth investing in right now?",
-    image: "/images/blog_trends.png"
+    image: "/images/blog_trends.webp"
   },
 ]
 
@@ -76,6 +76,7 @@ export function BlogSection() {
                     decoding="async"
                     width={800}
                     height={450}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </a>

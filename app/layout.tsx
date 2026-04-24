@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     locale: "en_AE",
     images: [
       {
-        url: "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.png",
+        url: "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp",
         width: 1200,
         height: 800,
         alt: "Large LED video wall display in a modern Dubai commercial space",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aztech LED | #1 LED Screen Supplier in Dubai, UAE",
     description: "Dubai's most trusted LED display company. Indoor, outdoor & specialty LED screens. 20+ years. 500+ clients.",
-    images: ["https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.png"],
+    images: ["https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp"],
   },
   alternates: {
     canonical: "https://aztech-seo-friendly.vercel.app/",
@@ -88,13 +88,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${dmSans.variable} ${dmMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${playfairDisplay.variable} ${dmSans.variable} ${dmMono.variable}`}>
       <head>
         {/* Preconnect for Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Preload hero image for LCP */}
-        <link rel="preload" as="image" href="/images/hero_led_wall_1774782256673.png" />
         {/* Geo tags for UAE local SEO */}
         <meta name="geo.region" content="AE-DU" />
         <meta name="geo.placename" content="Dubai, UAE" />
@@ -109,7 +107,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Aztech LED General Trading LLC",
-              "image": "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.png",
+              "image": "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp",
               "@id": "https://aztech-seo-friendly.vercel.app/",
               "url": "https://aztech-seo-friendly.vercel.app/",
               "telephone": "+97143574004",

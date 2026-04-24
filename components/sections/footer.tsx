@@ -1,4 +1,4 @@
-import { Phone, Linkedin, Instagram, Facebook, Youtube } from "lucide-react"
+import { Phone, Linkedin, Instagram, Facebook } from "lucide-react"
 
 const products = [
   "HD LED Display",
@@ -28,16 +28,12 @@ const company = [
   { label: "Our Services", href: "/#services" },
   { label: "Blog & Resources", href: "/#blog" },
   { label: "Contact Us", href: "/#contact" },
-  { label: "Download Brochure", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
 ]
 
 const socials = [
   { icon: Linkedin, href: "https://www.linkedin.com/company/aztechled", label: "LinkedIn" },
   { icon: Instagram, href: "https://www.instagram.com/aztechled", label: "Instagram" },
   { icon: Facebook, href: "https://www.facebook.com/aztechled", label: "Facebook" },
-  { icon: Youtube, href: "#", label: "YouTube" },
 ]
 
 export function Footer() {
@@ -45,7 +41,7 @@ export function Footer() {
     <footer className="bg-[var(--bg-primary)] pt-20 border-t border-[var(--border-light)]">
       <div className="px-[var(--section-pad-x)]">
         <div className="max-w-[var(--container-max)] mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 pb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 pb-12 lg:pb-16">
             {/* Brand Column */}
             <div className="lg:col-span-1.5 md:col-span-2 lg:col-span-1">
               <div className="flex flex-col mb-5">
@@ -169,10 +165,10 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="bg-[var(--bg-primary)] border-t border-[var(--border-light)]">
-        <div className="px-[var(--section-pad-x)] py-6">
+        <div className="px-[var(--section-pad-x)] py-6 pb-28 md:pb-8">
           <div className="max-w-[var(--container-max)] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-center md:text-left">
             <p className="font-sans text-[0.8rem] font-medium text-[var(--text-secondary)]">
-              © 2025 Aztech General Trading LLC. All Rights Reserved.
+              © 2026 Aztech General Trading LLC. All Rights Reserved.
             </p>
             <p className="font-sans text-[0.75rem] font-medium text-[var(--text-secondary)] hidden lg:block">
               LED Screen Dubai | Digital Signage UAE | Outdoor LED Supplier Dubai

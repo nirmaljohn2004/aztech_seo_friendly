@@ -8,12 +8,32 @@ export function FloatingButtons() {
   const [showTooltip, setShowTooltip] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 400)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowBackToTop(!entry.isIntersecting)
+      },
+      { threshold: 0, rootMargin: "-400px 0px 0px 0px" }
+    )
+
+    let topAnchor = document.getElementById("nav-top-anchor")
+    if (!topAnchor) {
+      topAnchor = document.createElement("div")
+      topAnchor.id = "nav-top-anchor"
+      topAnchor.style.position = "absolute"
+      topAnchor.style.top = "0"
+      topAnchor.style.left = "0"
+      topAnchor.style.width = "100%"
+      topAnchor.style.height = "1px"
+      topAnchor.style.pointerEvents = "none"
+      topAnchor.style.zIndex = "-9999"
+      document.body.prepend(topAnchor)
     }
-    
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
+
+    observer.observe(topAnchor)
+
+    return () => {
+      observer.disconnect()
+    }
   }, [])
 
   const scrollToTop = () => {

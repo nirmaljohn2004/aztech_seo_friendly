@@ -127,7 +127,7 @@ export function ContactSection() {
               </div>
               
               <div className="flex flex-col gap-4">
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
+                <a href="https://www.google.com/maps/search/?api=1&query=25.237016,55.300728" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
                   <MapPin className="w-[18px] h-[18px] text-[var(--accent-mid)] mt-1 shrink-0" aria-hidden="true" />
                   <address className="font-sans text-[0.9rem] text-[var(--text-body)] not-italic leading-[1.6] group-hover:text-[var(--accent)] transition-colors">
                     Al Nishwan Building, Near ADCB Metro Station,<br />
