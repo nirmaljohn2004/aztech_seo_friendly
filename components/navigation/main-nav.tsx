@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { ProductsDropdown } from "./products-dropdown"
 import { SolutionsDropdown } from "./solutions-dropdown"
@@ -74,16 +75,19 @@ export function MainNav() {
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="h-[72px] md:h-[72px] px-[var(--section-pad-x)] flex items-center justify-between max-w-[1920px] mx-auto">
+        <div className="h-[84px] md:h-[92px] px-[var(--section-pad-x)] flex items-center justify-between max-w-[1920px] mx-auto">
           {/* Logo */}
-          <a href="/" className="flex flex-col">
-            <div className="flex items-baseline gap-0.5">
-              <span className={`font-serif text-[22px] font-bold ${(!isScrolled && isDarkPage) ? 'text-white' : 'text-[var(--text-primary)]'}`}>AZTECH</span>
-              <span className="font-sans text-[14px] font-semibold text-[var(--accent)] tracking-[0.06em]"> LED</span>
+          <a href="/" className="inline-flex items-center justify-center h-full hover:opacity-80 transition-opacity">
+            <div className="w-16 h-16 md:w-20 md:h-20 overflow-hidden rounded-md">
+              <Image
+                src="/images/1.jpg__2_-removebg-preview.png"
+                alt="Aztech LED Logo"
+                width={80}
+                height={80}
+                priority
+                className="w-full h-full object-cover"
+              />
             </div>
-            <span className={`font-sans text-[9px] font-normal tracking-[0.1em] uppercase ${(!isScrolled && isDarkPage) ? 'text-white/70' : 'text-[var(--text-muted)]'}`}>
-              General Trading LLC
-            </span>
           </a>
 
           {/* Desktop Nav Links */}

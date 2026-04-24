@@ -45,17 +45,17 @@ export function ProductsSection() {
     <section 
       ref={ref}
       id="products" 
-      className={`section-padding bg-[var(--bg-secondary)] reveal-section ${isVisible ? "visible" : ""}`}
+      className={`section-padding bg-[var(--accent)] reveal-section ${isVisible ? "visible" : ""}`}
       aria-label="LED Screen Products by Aztech UAE"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="eyebrow mb-3">WHAT WE SUPPLY</p>
-          <h2 className="font-serif text-[clamp(2rem,3.5vw,3rem)] font-bold leading-[1.15] text-[var(--text-primary)] mb-4">
+          <p className="eyebrow !text-white/80 mb-3">WHAT WE SUPPLY</p>
+          <h2 className="font-serif text-[clamp(2rem,3.5vw,3rem)] font-bold leading-[1.15] text-white mb-4">
             18 LED Screen Products For Every Need
           </h2>
-          <p className="font-sans text-[1rem] leading-[1.75] text-[var(--text-secondary)] max-w-[600px] mx-auto">
+          <p className="font-sans text-[1rem] leading-[1.75] text-white/70 max-w-[600px] mx-auto">
             From poster-sized indoor displays to stadium-scale outdoor screens — we stock and supply the UAE&apos;s widest range of LED display products.
           </p>
         </div>
@@ -68,7 +68,7 @@ export function ProductsSection() {
             { name: "Transparent Glass LED", image: "/images/product_transparent_1774782335491.webp" },
             { name: "Slim Poster LED", image: "/images/product_poster_1774782355639.webp" },
           ].map((featured) => (
-            <div key={featured.name} className="relative aspect-square rounded-[var(--radius-md)] overflow-hidden group shadow-[var(--shadow-card)]">
+            <div key={featured.name} className="relative aspect-square rounded-[var(--radius-md)] overflow-hidden group shadow-[var(--shadow-card)] border border-white/10 bg-white/5 backdrop-blur-sm">
               <Image 
                 src={featured.image} 
                 alt={`${featured.name} - high quality product photography`} 
@@ -91,11 +91,11 @@ export function ProductsSection() {
           {products.map((product, index) => (
             <div 
               key={product.name}
-              className="group relative bg-white flex flex-col rounded-[var(--radius-md)] overflow-hidden border border-[var(--border-light)] hover:border-[var(--accent)] hover:shadow-[var(--shadow-hover)] transition-all duration-300"
+              className="group relative bg-white/5 flex flex-col rounded-[var(--radius-md)] overflow-hidden border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300"
               style={{ transitionDelay: `${index * 20}ms` }}
             >
               {/* Product Image */}
-              <div className="relative aspect-video overflow-hidden bg-[var(--bg-tertiary)]">
+              <div className="relative aspect-video overflow-hidden bg-white/10">
                  <Image 
                    src={product.image}
                    alt={product.name}
@@ -107,7 +107,7 @@ export function ProductsSection() {
                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                  />
                  <div className="absolute top-3 right-3">
-                   <span className={`inline-block font-sans text-[0.68rem] font-bold px-[10px] py-[3px] rounded-[var(--radius-full)] shadow-sm ${tagColors[product.tag]} bg-white/90 backdrop-blur-sm border`}>
+                   <span className="inline-block font-sans text-[0.68rem] font-bold px-[10px] py-[3px] rounded-[var(--radius-full)] shadow-sm bg-white/15 text-white border border-white/10 backdrop-blur-sm">
                      {product.tag}
                    </span>
                  </div>
@@ -115,13 +115,13 @@ export function ProductsSection() {
               
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-center gap-2 mb-2">
-                  <product.icon className="w-5 h-5 text-[var(--accent-mid)] stroke-[1.5]" aria-hidden="true" />
-                  <h3 className="font-sans text-[1.05rem] font-semibold text-[var(--text-primary)]">
+                  <product.icon className="w-5 h-5 text-white/80 stroke-[1.5]" aria-hidden="true" />
+                  <h3 className="font-sans text-[1.05rem] font-semibold text-white">
                     {product.name}
                   </h3>
                 </div>
                 
-                <p className="font-sans text-[0.88rem] text-[var(--text-secondary)] line-clamp-2 mt-auto">
+                <p className="font-sans text-[0.88rem] text-white/70 line-clamp-2 mt-auto">
                   {product.description}
                 </p>
               </div>
@@ -131,12 +131,12 @@ export function ProductsSection() {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <p className="font-sans text-[0.9rem] text-[var(--text-secondary)] mb-4">
+          <p className="font-sans text-[0.9rem] text-white/70 mb-4">
             Looking for a specific spec? Get a custom quote.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center px-6 py-3 bg-transparent border-[1.5px] border-[var(--accent)] text-[var(--accent)] font-sans text-[0.9rem] font-semibold rounded-[var(--radius-sm)] hover:bg-[var(--accent)] hover:text-white transition-all duration-200"
+            className="inline-flex items-center px-6 py-3 bg-white text-[var(--accent)] font-sans text-[0.9rem] font-semibold rounded-[var(--radius-sm)] hover:bg-[var(--accent-light)] hover:text-[var(--accent-dark-visible)] transition-all duration-200"
           >
             Request Custom Quote
           </a>

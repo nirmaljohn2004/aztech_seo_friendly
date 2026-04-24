@@ -102,9 +102,6 @@ export function HeroSection() {
               Illuminate<br />
               <span className="relative inline-block">
                 Your Vision
-                <svg className="absolute -bottom-2 left-0 w-full h-4" viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true">
-                  <path d="M2 8 Q 50 2, 100 8 Q 150 14, 198 6" fill="none" stroke="var(--copper)" strokeWidth="3" strokeLinecap="round" className="hero-underline-path" />
-                </svg>
               </span>
             </h1>
             <p className="font-sans hero-item font-light leading-[1.75] text-[var(--text-secondary)] max-w-[420px] mb-6 lg:mb-8"

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Phone, Linkedin, Instagram, Facebook } from "lucide-react"
 
 const products = [
@@ -45,13 +46,15 @@ export function Footer() {
             {/* Brand Column */}
             <div className="lg:col-span-1.5 md:col-span-2 lg:col-span-1">
               <div className="flex flex-col mb-5">
-                <div className="flex items-baseline gap-0.5">
-                  <span className="font-serif text-[26px] font-bold text-[var(--text-primary)]">AZTECH</span>
-                  <span className="font-sans text-[14px] font-semibold text-[var(--accent)]"> LED</span>
-                </div>
-                <span className="font-sans text-[10px] text-[var(--text-secondary)] tracking-[0.12em] uppercase">
-                  General Trading LLC
-                </span>
+                <a href="/" className="inline-flex items-center mb-4 hover:opacity-80 transition-opacity w-fit">
+                  <Image
+                    src="/images/1.jpg__2_-removebg-preview.png"
+                    alt="Aztech LED Logo"
+                    width={80}
+                    height={80}
+                    className="w-20 h-20 object-cover"
+                  />
+                </a>
               </div>
               
               <p className="font-sans text-[0.88rem] leading-[1.7] text-[var(--text-secondary)] mb-6 max-w-sm">
