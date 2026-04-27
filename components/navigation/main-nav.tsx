@@ -85,7 +85,7 @@ export function MainNav() {
                 width={80}
                 height={80}
                 priority
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain scale-125"
               />
             </div>
           </a>

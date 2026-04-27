@@ -32,7 +32,7 @@ const nextConfig = {
       },
       // Cache static assets aggressively
       {
-        source: '/images/(.*)',
+        source: '/:asset(images|videos)/(.*)',
         headers: [
           {
             key: 'Cache-Control',
