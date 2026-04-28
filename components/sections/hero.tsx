@@ -50,7 +50,6 @@ export function HeroSection() {
           loop
           playsInline
           preload="metadata"
-          poster="/images/hero-fallback.jpg"
           aria-label="LED module animation"
         >
           <source src="/videos/aztech-hero-cinematic.mp4" type="video/mp4" />
