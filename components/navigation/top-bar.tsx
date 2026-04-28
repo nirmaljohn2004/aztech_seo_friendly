@@ -1,10 +1,33 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Phone, Clock, MapPin } from "lucide-react"
 
 export function TopBar() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    let canHide = false
+
+    const handleScroll = () => {
+      if (canHide) setIsScrolled(window.scrollY > 16)
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+
+    const enableHide = requestAnimationFrame(() => {
+      canHide = true
+      handleScroll()
+    })
+
+    return () => {
+      cancelAnimationFrame(enableHide)
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <div className="h-9 bg-[var(--accent)] text-white text-[0.75rem] font-normal">
+    <div className={`fixed top-0 left-0 right-0 z-[60] h-9 bg-[var(--accent)] text-white text-[0.75rem] font-normal transition-transform duration-300 ${isScrolled ? "-translate-y-full" : "translate-y-0"}`}>
       <div className="h-full px-[var(--section-pad-x)] flex items-center justify-between max-w-[1920px] mx-auto">
         <div className="hidden md:flex items-center gap-1.5">
           <MapPin className="w-3.5 h-3.5" aria-hidden="true" />

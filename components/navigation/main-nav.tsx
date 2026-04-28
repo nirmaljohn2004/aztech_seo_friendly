@@ -25,34 +25,14 @@ export function MainNav() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   useEffect(() => {
-    // Bulletproof scroll detection using IntersectionObserver
-    // This is immune to Next.js BFCache scroll restoration timing issues
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsScrolled(!entry.isIntersecting)
-      },
-      { threshold: 0, rootMargin: "-36px 0px 0px 0px" }
-    )
-
-    // Create or find an invisible anchor at the absolute top of the body
-    let topAnchor = document.getElementById("nav-top-anchor")
-    if (!topAnchor) {
-      topAnchor = document.createElement("div")
-      topAnchor.id = "nav-top-anchor"
-      topAnchor.style.position = "absolute"
-      topAnchor.style.top = "0"
-      topAnchor.style.left = "0"
-      topAnchor.style.width = "100%"
-      topAnchor.style.height = "1px"
-      topAnchor.style.pointerEvents = "none"
-      topAnchor.style.zIndex = "-9999"
-      document.body.prepend(topAnchor)
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 16)
     }
 
-    observer.observe(topAnchor)
-
+    handleScroll()
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => {
-      observer.disconnect()
+      window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
@@ -167,7 +147,7 @@ export function MainNav() {
             className="fixed inset-0 bg-[rgba(17,17,17,0.5)] z-40 lg:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           />
-          <div className="fixed top-0 right-0 bottom-0 w-full max-w-[320px] bg-[var(--bg-primary)] z-50 lg:hidden overflow-y-auto">
+          <div className="fixed top-0 right-0 bottom-0 w-full max-w-[320px] bg-[var(--bg-primary)] z-[70] lg:hidden overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-end mb-8">
                 <button
