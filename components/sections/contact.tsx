@@ -73,23 +73,42 @@ export function ContactSection() {
       message:  (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim(),
     }
 
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
-      const json = await res.json()
-      if (!res.ok) {
-        setErrorMsg(json.error ?? 'Something went wrong. Please try again.')
-      } else {
-        setIsSubmitted(true)
-      }
-    } catch {
-      setErrorMsg('Network error. Please check your connection and try again.')
-    } finally {
+    // Basic validation
+    if (!data.name || !data.email || !data.phone || !data.service) {
+      setErrorMsg('Please fill in all required fields.')
       setIsSubmitting(false)
+      return
     }
+
+    // Build email content
+    const subject = `Contact Form Submission from ${data.name}`
+    const body = `
+Name: ${data.name}
+Company: ${data.company || 'N/A'}
+Email: ${data.email}
+Phone: ${data.phone}
+Service Required: ${data.service}
+Project Location: ${data.location || 'N/A'}
+Approximate Budget: ${data.budget}
+How did you hear about us: ${data.source || 'N/A'}
+
+Project Details / Message:
+${data.message || 'No message provided'}
+    `.trim()
+
+    // Encode for URL
+    const encodedSubject = encodeURIComponent(subject)
+    const encodedBody = encodeURIComponent(body)
+
+    // Build Gmail compose URL
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=nirmaljohnrappakaran28012004@gmail.com&su=${encodedSubject}&body=${encodedBody}`
+
+    // Open Gmail in new tab
+    window.open(gmailUrl, '_blank')
+
+    // Show success message
+    setIsSubmitted(true)
+    setIsSubmitting(false)
   }
 
   return (
@@ -212,10 +231,10 @@ export function ContactSection() {
                   <CheckCircle className="w-8 h-8 text-[var(--success)]" />
                 </div>
                 <h3 className="font-sans text-[1.2rem] font-semibold text-[var(--text-primary)] mb-2">
-                  Thank You!
+                  Gmail Opened!
                 </h3>
                 <p className="font-sans text-[1rem] text-[var(--text-body)] mb-6">
-                  We&apos;ve received your enquiry and will contact you within 24 hours.
+                  Gmail has been opened in a new tab with your enquiry details. Please review and send the email.
                 </p>
                 <a 
                   href="#projects" 
