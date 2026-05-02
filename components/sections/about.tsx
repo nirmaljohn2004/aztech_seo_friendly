@@ -29,17 +29,17 @@ export function AboutSection() {
             <p className="eyebrow mb-3">WHO WE ARE</p>
             
             <h2 className="font-serif text-[clamp(2rem,3.5vw,3rem)] font-bold leading-[1.15] text-[var(--text-primary)] mb-5">
-              Dubai&apos;s Legacy,<br />Now In Kerala
+              Dubai&apos;s Legacy,<br />Now In India
             </h2>
             
             <div className="w-12 h-[2px] bg-[var(--accent)] mb-5" aria-hidden="true" />
             
             <p className="font-sans text-[1.1rem] font-light leading-[1.8] text-[var(--text-secondary)] mb-5">
-              After establishing ourselves as a well-known industry leader in Dubai for over 20 years, Aztech LED is thrilled to launch our operations in Kerala for the very first time. From our roots in Karama, Dubai — where we served government ministries, international hotel chains, and stadiums — we are now delivering that exact same world-class standard right here in Ernakulam, Kerala.
+              After establishing ourselves as a well-known industry leader in Dubai for over 20 years, Aztech LED is thrilled to launch our operations in India for the very first time. From our roots in Karama, Dubai — where we served government ministries, international hotel chains, and stadiums — we are now delivering that exact same world-class standard across India.
             </p>
             
             <p className="font-sans text-[1rem] leading-[1.75] text-[var(--text-body)] mb-5">
-              We began by projecting light onto building facades, bridges, and hotel exteriors — turning architecture into landmarks across the UAE. That obsession with quality and precision carries into everything we do today: indoor LED screens that command attention, outdoor displays built for Kerala&apos;s climate, and custom installations that no one else can deliver.
+              We began by projecting light onto building facades, bridges, and hotel exteriors — turning architecture into landmarks across the UAE. That obsession with quality and precision carries into everything we do today: indoor LED screens that command attention, outdoor displays built for the Indian climate, and custom installations that no one else can deliver.
             </p>
             
             <p className="font-sans text-[1rem] leading-[1.75] text-[var(--text-body)] mb-6">
@@ -84,7 +84,7 @@ export function AboutSection() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
               <div className="absolute top-4 right-4 bg-[var(--accent)] text-white font-sans text-[0.7rem] font-medium px-[10px] py-1 rounded-[2px]">
-                Dubai Expertise · Kerala Presence
+                Dubai Expertise · India Presence
               </div>
             </div>
             

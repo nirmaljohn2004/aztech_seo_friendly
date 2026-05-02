@@ -4,7 +4,7 @@
  */
 export const siteConfig = {
   name: "Aztech LED",
-  title: "Aztech LED | #1 LED Screen Supplier in Kerala",
+  title: "Aztech LED | #1 LED Screen Supplier in India",
   companyName: "Aztech LED Screens Private Limited",
   url: "https://aztech-seo-friendly.vercel.app", // Change to the final .com domain later
   ogImage: "/images/hero_led_wall_1774782256673.png",

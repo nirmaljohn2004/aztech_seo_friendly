@@ -8,7 +8,7 @@ const features = [
   {
     icon: Calendar,
     title: "20+ Years Dubai Experience",
-    description: "Aztech has been operating in Dubai since before most of our competitors existed. That means deep supplier relationships, world-class product access, and a reputation built on results — not marketing. Now we bring that legacy to Kerala.",
+    description: "Aztech has been operating in Dubai since before most of our competitors existed. That means deep supplier relationships, world-class product access, and a reputation built on results — not marketing. Now we bring that legacy to India.",
   },
   {
     icon: Users,
@@ -23,7 +23,7 @@ const features = [
   {
     icon: Package,
     title: "Direct Dubai Supply Chain",
-    description: "We maintain a direct supply chain from Dubai with substantial inventory across all major product lines. That means your Kerala project starts on schedule — not after a lengthy wait for an import shipment.",
+    description: "We maintain a direct supply chain from Dubai with substantial inventory across all major product lines. That means your project starts on schedule — not after a lengthy wait for an import shipment.",
   },
   {
     icon: Wrench,
@@ -54,7 +54,7 @@ export function WhyChooseSection() {
             Why Serious Buyers Choose Aztech
           </h2>
           <p className="font-sans text-[1rem] leading-[1.75] text-white/70 max-w-[600px] mx-auto">
-            With the growing LED market in Kerala, here is what makes Aztech the choice for businesses who cannot afford to get it wrong.
+            With the growing LED market in India, here is what makes Aztech the choice for businesses who cannot afford to get it wrong.
           </p>
         </div>
 

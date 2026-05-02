@@ -58,8 +58,8 @@ export function Footer() {
               </div>
               
               <p className="font-sans text-[0.88rem] leading-[1.7] text-[var(--text-secondary)] mb-6 max-w-sm">
-                Kerala&apos;s LED screen specialists, backed by 20+ years of Dubai excellence.
-                We design, supply, install and service every project — from Ernakulam to any corner of Kerala.
+                India&apos;s LED screen specialists, backed by 20+ years of Dubai excellence.
+                We design, supply, install and service every project — across all major cities in India.
               </p>
 
               {/* Social Links */}
@@ -180,10 +180,10 @@ export function Footer() {
             </div>
             <div className="flex flex-col gap-1.5 lg:text-right">
               <p className="font-sans text-[0.75rem] font-medium text-[var(--text-secondary)] hidden lg:block">
-                LED Screen Kerala | Digital Signage Kochi | Outdoor LED Ernakulam
+                LED Screen India | Digital Signage India | Outdoor LED Displays
               </p>
               <p className="font-sans text-[0.75rem] font-medium text-[var(--text-secondary)]/70">
-                Dubai Expertise · Kerala Service
+                Dubai Expertise · India Service
               </p>
             </div>
           </div>

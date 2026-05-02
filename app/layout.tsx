@@ -25,9 +25,9 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Aztech LED | #1 LED Screen Supplier in Kerala | Indoor & Outdoor Displays",
-  description: "Aztech LED Screens — Kerala’s premier LED screen supplier backed by 20+ years of Dubai excellence. Indoor LED displays, outdoor billboards, transparent LED & video walls. Serving Kochi, Ernakulam & all of Kerala. Get a free quote today.",
-  keywords: "LED screen Kerala, LED display supplier Kochi, outdoor LED billboard Ernakulam, indoor LED screen Kerala, video wall Kochi, transparent LED display Kerala, LED screen installation Kochi, digital signage Kerala, LED screen price Kerala, P2 LED screen Ernakulam",
+  title: "Aztech LED | #1 LED Screen Supplier in India | Indoor & Outdoor Displays",
+  description: "Aztech LED Screens — India’s premier LED screen supplier backed by 20+ years of Dubai excellence. Indoor LED displays, outdoor billboards, transparent LED & video walls. Serving all of India. Get a free quote today.",
+  keywords: "LED screen India, LED display supplier India, outdoor LED billboard India, indoor LED screen India, video wall India, transparent LED display India, LED screen installation India, digital signage India, LED screen price India, P2 LED screen India",
   authors: [{ name: "Aztech LED Screens Private Limited" }],
   robots: {
     index: true,
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://aztech-seo-friendly.vercel.app/",
-    title: "Aztech LED | #1 LED Screen Supplier in Kerala",
-    description: "Kerala’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor, transparent LED screens & video walls. Serving Kochi, Ernakulam & all of Kerala.",
+    title: "Aztech LED | #1 LED Screen Supplier in India",
+    description: "India’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor, transparent LED screens & video walls. Serving all of India.",
     siteName: "Aztech LED Screens Private Limited",
     locale: "en_IN",
     images: [
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aztech LED | #1 LED Screen Supplier in Kerala",
-    description: "Kerala’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor & specialty LED screens. 500+ clients.",
+    title: "Aztech LED | #1 LED Screen Supplier in India",
+    description: "India’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor & specialty LED screens. 500+ clients.",
     images: ["https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp"],
   },
   alternates: {
@@ -93,7 +93,7 @@ export default function RootLayout({
         {/* Preconnect for Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Geo tags for Kerala local SEO */}
+        {/* Geo tags for local SEO */}
         <meta name="geo.region" content="IN-KL" />
         <meta name="geo.placename" content="Ernakulam, Kerala, India" />
         <meta name="geo.position" content="10.0501;76.3108" />
@@ -132,8 +132,8 @@ export default function RootLayout({
                 "closes": "18:00"
               },
               "sameAs": [],
-              "description": "Aztech LED Screens Private Limited is Kerala’s premier LED screen supplier backed by 20+ years of Dubai excellence. We supply indoor displays, outdoor billboards, transparent LED, video walls and specialty screens across Kerala.",
-              "areaServed": ["Ernakulam", "Kochi", "Thiruvananthapuram", "Thrissur", "Kozhikode", "Kollam", "Kerala", "India"],
+              "description": "Aztech LED Screens Private Limited is India’s premier LED screen supplier backed by 20+ years of Dubai excellence. We supply indoor displays, outdoor billboards, transparent LED, video walls and specialty screens across India.",
+              "areaServed": ["Mumbai", "Delhi", "Bangalore", "Kochi", "Chennai", "Hyderabad", "India"],
               "knowsAbout": ["LED Screen", "Digital Signage", "Outdoor Billboard", "Video Wall", "Indoor LED Display", "Transparent LED", "Architectural Lighting"]
             })
           }}
@@ -147,7 +147,7 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "Aztech LED",
               "url": "https://aztech-seo-friendly.vercel.app/",
-              "description": "Kerala’s #1 LED screen supplier. Indoor, outdoor, specialty LED displays and video walls.",
+              "description": "India’s #1 LED screen supplier. Indoor, outdoor, specialty LED displays and video walls.",
               "publisher": {
                 "@type": "Organization",
                 "name": "Aztech LED Screens Private Limited",
@@ -188,18 +188,18 @@ export default function RootLayout({
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "What is the price of an LED screen in Kerala?",
+                  "name": "What is the price of an LED screen in India?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "LED screen prices in Kerala vary based on size, pixel pitch and type. Indoor LED screens start from ₹50,000, while large outdoor billboard displays range from ₹2,00,000 to ₹10,00,000+. Contact Aztech LED for a free custom quote."
+                    "text": "LED screen prices in India vary based on size, pixel pitch and type. Indoor LED screens start from ₹50,000, while large outdoor billboard displays range from ₹2,00,000 to ₹10,00,000+. Contact Aztech LED for a free custom quote."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Does Aztech LED supply outdoor LED screens in Kerala?",
+                  "name": "Does Aztech LED supply outdoor LED screens in India?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Aztech LED supplies weatherproof outdoor DIP and SMD LED displays rated up to 5000 nits, suitable for billboards, building facades, and roadside signage across Kochi, Ernakulam, Thiruvananthapuram, Thrissur and all of Kerala."
+                    "text": "Yes. Aztech LED supplies weatherproof outdoor DIP and SMD LED displays rated up to 5000 nits, suitable for billboards, building facades, and roadside signage across India."
                   }
                 },
                 {
@@ -212,10 +212,10 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
-                  "name": "Does Aztech LED provide installation services in Kerala?",
+                  "name": "Does Aztech LED provide installation services in India?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Aztech LED has a full in-house installation team that handles site survey, structural mounting, cable routing, screen assembly, controller configuration and final commissioning across Kerala. No subcontractors are used."
+                    "text": "Yes. Aztech LED has a full in-house installation team that handles site survey, structural mounting, cable routing, screen assembly, controller configuration and final commissioning across India. No subcontractors are used."
                   }
                 },
                 {

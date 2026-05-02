@@ -20,22 +20,18 @@ const serviceOptions = [
 ]
 
 const locationOptions = [
-  "Select district...",
-  "Ernakulam (Kochi)",
-  "Thiruvananthapuram",
-  "Thrissur",
-  "Kozhikode",
-  "Kollam",
-  "Palakkad",
-  "Malappuram",
-  "Alappuzha",
-  "Kottayam",
-  "Kannur",
-  "Idukki",
-  "Wayanad",
-  "Kasaragod",
-  "Pathanamthitta",
-  "Outside Kerala",
+  "Select location...",
+  "Mumbai",
+  "Delhi / NCR",
+  "Bangalore",
+  "Hyderabad",
+  "Chennai",
+  "Kolkata",
+  "Pune",
+  "Ahmedabad",
+  "Kochi",
+  "Other (within India)",
+  "Outside India",
 ]
 
 const budgetOptions = [
