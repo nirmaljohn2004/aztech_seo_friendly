@@ -25,10 +25,10 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Aztech LED | #1 LED Screen Supplier in Dubai, UAE | Indoor & Outdoor Displays",
-  description: "Aztech LED — Dubai's trusted LED screen supplier for 20+ years. Indoor LED displays, outdoor billboards, transparent LED, video walls & custom installations. Trusted by ADNOC, RTA, Dubai Mall. Get a free quote today.",
-  keywords: "LED screen Dubai, LED display supplier UAE, outdoor LED billboard Dubai, indoor LED screen UAE, video wall Dubai, transparent LED display, LED screen installation Dubai, digital signage UAE, LED screen price Dubai, P2 LED screen Dubai",
-  authors: [{ name: "Aztech LED General Trading LLC" }],
+  title: "Aztech LED | #1 LED Screen Supplier in Kerala | Indoor & Outdoor Displays",
+  description: "Aztech LED Screens — Kerala’s premier LED screen supplier backed by 20+ years of Dubai excellence. Indoor LED displays, outdoor billboards, transparent LED & video walls. Serving Kochi, Ernakulam & all of Kerala. Get a free quote today.",
+  keywords: "LED screen Kerala, LED display supplier Kochi, outdoor LED billboard Ernakulam, indoor LED screen Kerala, video wall Kochi, transparent LED display Kerala, LED screen installation Kochi, digital signage Kerala, LED screen price Kerala, P2 LED screen Ernakulam",
+  authors: [{ name: "Aztech LED Screens Private Limited" }],
   robots: {
     index: true,
     follow: true,
@@ -42,10 +42,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://aztech-seo-friendly.vercel.app/",
-    title: "Aztech LED | #1 LED Screen Supplier in Dubai, UAE",
-    description: "Dubai's most trusted LED display company. 20+ years experience. Indoor, outdoor, transparent LED screens & video walls. Serving ADNOC, RTA, Dubai Mall & 500+ clients.",
-    siteName: "Aztech LED General Trading LLC",
-    locale: "en_AE",
+    title: "Aztech LED | #1 LED Screen Supplier in Kerala",
+    description: "Kerala’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor, transparent LED screens & video walls. Serving Kochi, Ernakulam & all of Kerala.",
+    siteName: "Aztech LED Screens Private Limited",
+    locale: "en_IN",
     images: [
       {
         url: "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp",
@@ -57,18 +57,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aztech LED | #1 LED Screen Supplier in Dubai, UAE",
-    description: "Dubai's most trusted LED display company. Indoor, outdoor & specialty LED screens. 20+ years. 500+ clients.",
+    title: "Aztech LED | #1 LED Screen Supplier in Kerala",
+    description: "Kerala’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor & specialty LED screens. 500+ clients.",
     images: ["https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp"],
   },
   alternates: {
     canonical: "https://aztech-seo-friendly.vercel.app/",
   },
   other: {
-    'geo.region': 'AE-DU',
-    'geo.placename': 'Dubai, UAE',
-    'geo.position': '25.2048493;55.2707828',
-    'ICBM': '25.2048493, 55.2707828',
+    'geo.region': 'IN-KL',
+    'geo.placename': 'Ernakulam, Kerala, India',
+    'geo.position': '10.0501;76.3108',
+    'ICBM': '10.0501, 76.3108',
     'http-equiv-Content-Language': 'en',
   },
   formatDetection: {
@@ -93,11 +93,11 @@ export default function RootLayout({
         {/* Preconnect for Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Geo tags for UAE local SEO */}
-        <meta name="geo.region" content="AE-DU" />
-        <meta name="geo.placename" content="Dubai, UAE" />
-        <meta name="geo.position" content="25.2048493;55.2707828" />
-        <meta name="ICBM" content="25.2048493, 55.2707828" />
+        {/* Geo tags for Kerala local SEO */}
+        <meta name="geo.region" content="IN-KL" />
+        <meta name="geo.placename" content="Ernakulam, Kerala, India" />
+        <meta name="geo.position" content="10.0501;76.3108" />
+        <meta name="ICBM" content="10.0501, 76.3108" />
         <meta httpEquiv="Content-Language" content="en" />
         {/* LocalBusiness Schema */}
         <script
@@ -106,24 +106,24 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "Aztech LED General Trading LLC",
+              "name": "Aztech LED Screens Private Limited",
               "image": "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp",
               "@id": "https://aztech-seo-friendly.vercel.app/",
               "url": "https://aztech-seo-friendly.vercel.app/",
-              "telephone": "+97143574004",
-              "priceRange": "AED 10,000 - AED 200,000+",
+              "telephone": "+91XXXXXXXXXX",
+              "priceRange": "₹50,000 - ₹10,00,000+",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Al Nishwan Building, Near ADCB Metro Station, Karama",
-                "addressLocality": "Dubai",
-                "addressRegion": "Dubai",
-                "postalCode": "231331",
-                "addressCountry": "AE"
+                "streetAddress": "H.No.21, Kuttiyil House, Sundaragiri Road, Kalamassery",
+                "addressLocality": "Ernakulam",
+                "addressRegion": "Kerala",
+                "postalCode": "683104",
+                "addressCountry": "IN"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 25.2048493,
-                "longitude": 55.2707828
+                "latitude": 10.0501,
+                "longitude": 76.3108
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -131,9 +131,9 @@ export default function RootLayout({
                 "opens": "08:00",
                 "closes": "18:00"
               },
-              "sameAs": ["https://wa.me/971561425339"],
-              "description": "Aztech LED is Dubai's leading LED screen supplier with 20+ years experience. We supply indoor displays, outdoor billboards, transparent LED, video walls and specialty screens across UAE.",
-              "areaServed": ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Fujairah", "Ras Al Khaimah", "UAE"],
+              "sameAs": [],
+              "description": "Aztech LED Screens Private Limited is Kerala’s premier LED screen supplier backed by 20+ years of Dubai excellence. We supply indoor displays, outdoor billboards, transparent LED, video walls and specialty screens across Kerala.",
+              "areaServed": ["Ernakulam", "Kochi", "Thiruvananthapuram", "Thrissur", "Kozhikode", "Kollam", "Kerala", "India"],
               "knowsAbout": ["LED Screen", "Digital Signage", "Outdoor Billboard", "Video Wall", "Indoor LED Display", "Transparent LED", "Architectural Lighting"]
             })
           }}
@@ -147,10 +147,10 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "Aztech LED",
               "url": "https://aztech-seo-friendly.vercel.app/",
-              "description": "Dubai's #1 LED screen supplier. Indoor, outdoor, specialty LED displays and video walls.",
+              "description": "Kerala’s #1 LED screen supplier. Indoor, outdoor, specialty LED displays and video walls.",
               "publisher": {
                 "@type": "Organization",
-                "name": "Aztech LED General Trading LLC",
+                "name": "Aztech LED Screens Private Limited",
                 "logo": {
                   "@type": "ImageObject",
                   "url": "https://aztech-seo-friendly.vercel.app/icon.svg",
@@ -188,18 +188,18 @@ export default function RootLayout({
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "What is the price of an LED screen in Dubai?",
+                  "name": "What is the price of an LED screen in Kerala?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "LED screen prices in Dubai vary based on size, pixel pitch and type. Indoor LED screens start from AED 10,000, while large outdoor billboard displays range from AED 50,000 to AED 200,000+. Contact Aztech LED for a free custom quote."
+                    "text": "LED screen prices in Kerala vary based on size, pixel pitch and type. Indoor LED screens start from ₹50,000, while large outdoor billboard displays range from ₹2,00,000 to ₹10,00,000+. Contact Aztech LED for a free custom quote."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Does Aztech LED supply outdoor LED screens in UAE?",
+                  "name": "Does Aztech LED supply outdoor LED screens in Kerala?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Aztech LED supplies weatherproof outdoor DIP and SMD LED displays rated up to 5000 nits for the UAE climate, suitable for billboards, building facades, and roadside signage across Dubai, Abu Dhabi, Sharjah and all Emirates."
+                    "text": "Yes. Aztech LED supplies weatherproof outdoor DIP and SMD LED displays rated up to 5000 nits, suitable for billboards, building facades, and roadside signage across Kochi, Ernakulam, Thiruvananthapuram, Thrissur and all of Kerala."
                   }
                 },
                 {
@@ -212,10 +212,10 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
-                  "name": "Does Aztech LED provide installation services in Dubai?",
+                  "name": "Does Aztech LED provide installation services in Kerala?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Aztech LED has a full in-house installation team that handles site survey, structural mounting, cable routing, screen assembly, controller configuration and final commissioning. No subcontractors are used."
+                    "text": "Yes. Aztech LED has a full in-house installation team that handles site survey, structural mounting, cable routing, screen assembly, controller configuration and final commissioning across Kerala. No subcontractors are used."
                   }
                 },
                 {

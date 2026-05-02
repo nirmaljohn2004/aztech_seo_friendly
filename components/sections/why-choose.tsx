@@ -7,8 +7,8 @@ import { Calendar, Users, Landmark, Package, Wrench, Award } from "lucide-react"
 const features = [
   {
     icon: Calendar,
-    title: "20+ Years in UAE",
-    description: "Aztech has been operating in the UAE since before most of our competitors existed. That means deep supplier relationships, unmatched local knowledge, and a reputation built on results — not marketing.",
+    title: "20+ Years Dubai Experience",
+    description: "Aztech has been operating in Dubai since before most of our competitors existed. That means deep supplier relationships, world-class product access, and a reputation built on results — not marketing. Now we bring that legacy to Kerala.",
   },
   {
     icon: Users,
@@ -22,8 +22,8 @@ const features = [
   },
   {
     icon: Package,
-    title: "Large UAE Stock",
-    description: "We maintain substantial on-hand inventory across all major product lines. That means your project starts on schedule — not after a 6-week wait for an import shipment.",
+    title: "Direct Dubai Supply Chain",
+    description: "We maintain a direct supply chain from Dubai with substantial inventory across all major product lines. That means your Kerala project starts on schedule — not after a lengthy wait for an import shipment.",
   },
   {
     icon: Wrench,
@@ -33,7 +33,7 @@ const features = [
   {
     icon: Award,
     title: "Trusted by 500+ Clients",
-    description: "From hypermarkets to hospitals, from schools to stadiums — 500+ UAE businesses have trusted Aztech. Our growth has been entirely referral and repeat — the most honest measure of quality.",
+    description: "From hypermarkets to hospitals, from schools to stadiums — 500+ clients across the UAE and India have trusted Aztech. Our growth has been entirely referral and repeat — the most honest measure of quality.",
   },
 ]
 
@@ -54,7 +54,7 @@ export function WhyChooseSection() {
             Why Serious Buyers Choose Aztech
           </h2>
           <p className="font-sans text-[1rem] leading-[1.75] text-white/70 max-w-[600px] mx-auto">
-            With dozens of LED suppliers in Dubai, here is what makes Aztech the choice for clients who cannot afford to get it wrong.
+            With the growing LED market in Kerala, here is what makes Aztech the choice for businesses who cannot afford to get it wrong.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { useReveal } from "@/hooks/use-reveal"
 
 const stats = [
-  { number: 20, suffix: "+", label: "Years in UAE Market" },
+  { number: 20, suffix: "+", label: "Years of Industry Experience" },
   { number: 500, suffix: "+", label: "Satisfied Clients" },
   { number: 1000, suffix: "+", label: "Projects Delivered" },
   { number: 18, suffix: "+", label: "Product Categories" },

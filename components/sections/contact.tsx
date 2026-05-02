@@ -20,23 +20,30 @@ const serviceOptions = [
 ]
 
 const locationOptions = [
-  "Select location...",
-  "Dubai",
-  "Abu Dhabi",
-  "Sharjah",
-  "Ajman",
-  "Fujairah",
-  "Ras Al Khaimah",
-  "Al Ain",
-  "Outside UAE",
+  "Select district...",
+  "Ernakulam (Kochi)",
+  "Thiruvananthapuram",
+  "Thrissur",
+  "Kozhikode",
+  "Kollam",
+  "Palakkad",
+  "Malappuram",
+  "Alappuzha",
+  "Kottayam",
+  "Kannur",
+  "Idukki",
+  "Wayanad",
+  "Kasaragod",
+  "Pathanamthitta",
+  "Outside Kerala",
 ]
 
 const budgetOptions = [
   "Prefer not to say",
-  "Under AED 10,000",
-  "AED 10,000 – 50,000",
-  "AED 50,000 – 200,000",
-  "AED 200,000+",
+  "Under ₹50,000",
+  "₹50,000 – ₹2,00,000",
+  "₹2,00,000 – ₹10,00,000",
+  "₹10,00,000+",
 ]
 
 const sourceOptions = [
@@ -141,24 +148,24 @@ ${data.message || 'No message provided'}
                   <span className="font-sans text-[14px] font-semibold text-[var(--accent)]"> LED</span>
                 </div>
                 <span className="font-sans text-[0.85rem] text-[var(--text-muted)]">
-                  Aztech General Trading LLC
+                  Aztech LED Screens Private Limited
                 </span>
               </div>
               
               <div className="flex flex-col gap-4">
-                <a href="https://www.google.com/maps/search/?api=1&query=25.237016,55.300728" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
+                <a href="https://www.google.com/maps/search/?api=1&query=10.0501,76.3108" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
                   <MapPin className="w-[18px] h-[18px] text-[var(--accent-mid)] mt-1 shrink-0" aria-hidden="true" />
                   <address className="font-sans text-[0.9rem] text-[var(--text-body)] not-italic leading-[1.6] group-hover:text-[var(--accent)] transition-colors">
-                    Al Nishwan Building, Near ADCB Metro Station,<br />
-                    Karama, Dubai, UAE<br />
-                    P.O. Box 231331
+                    H.No.21, Kuttiyil House, Sundaragiri Road,<br />
+                    Kalamassery, Ernakulam,<br />
+                    Kerala – 683104
                   </address>
                 </a>
                 
-                <a href="tel:+97143574004" className="flex items-center gap-3 group">
+                <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-3 group">
                   <Phone className="w-[18px] h-[18px] text-[var(--accent-mid)] shrink-0" aria-hidden="true" />
                   <span className="font-sans text-[0.9rem] text-[var(--text-body)] group-hover:text-[var(--accent)] transition-colors">
-                    +971 4 357 4004
+                    +91 XXXXX XXXXX
                   </span>
                 </a>
                 
@@ -190,8 +197,8 @@ ${data.message || 'No message provided'}
             {/* Map embed */}
             <div className="aspect-[4/3] rounded-[var(--radius-md)] border border-[var(--border-light)] overflow-hidden mb-6">
               <iframe
-                title="Aztech LED office location in Karama, Dubai"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.9617218474117!2d55.30072807538427!3d25.237016377681804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f431e0a9fa47f%3A0x21a89fbc1ca2d83f!2sKarama%2C%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1711815600000!5m2!1sen!2sae"
+                title="Aztech LED Screens office location in Kalamassery, Ernakulam, Kerala"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0!2d76.3108!3d10.0501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d3d27a98b9f%3A0x6b7f9b8c4e2d1a5c!2sKalamassery%2C%20Ernakulam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1746120000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -301,7 +308,7 @@ ${data.message || 'No message provided'}
                         id="phone"
                         name="phone"
                         required
-                        placeholder="+971 XX XXX XXXX"
+                        placeholder="+91 XXXXX XXXXX"
                         className="w-full px-4 py-3 font-sans text-[0.9rem] border border-[var(--border-medium)] rounded-[var(--radius-sm)] focus:border-[var(--accent)] focus:outline-none transition-colors"
                       />
                     </div>
@@ -336,7 +343,7 @@ ${data.message || 'No message provided'}
                         className="w-full px-4 py-3 font-sans text-[0.9rem] border border-[var(--border-medium)] rounded-[var(--radius-sm)] focus:border-[var(--accent)] focus:outline-none transition-colors bg-white"
                       >
                         {locationOptions.map((option) => (
-                          <option key={option} value={option === "Select location..." ? "" : option}>
+                          <option key={option} value={option === "Select district..." ? "" : option}>
                             {option}
                           </option>
                         ))}

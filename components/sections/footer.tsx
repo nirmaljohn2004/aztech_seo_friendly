@@ -58,9 +58,8 @@ export function Footer() {
               </div>
               
               <p className="font-sans text-[0.88rem] leading-[1.7] text-[var(--text-secondary)] mb-6 max-w-sm">
-                Dubai's premier LED screen supplier and system integrator.
-                Over two decades of excellence delivering cutting edge display
-                technology across the UAE and broader GCC region.
+                Kerala&apos;s LED screen specialists, backed by 20+ years of Dubai excellence.
+                We design, supply, install and service every project — from Ernakulam to any corner of Kerala.
               </p>
 
               {/* Social Links */}
@@ -142,10 +141,9 @@ export function Footer() {
                 Contact Us
               </h3>
               <address className="not-italic font-sans text-[0.82rem] text-[var(--text-secondary)] leading-[1.7] mb-4">
-                Al Nishwan Building,<br />
-                Near ADCB Metro Station,<br />
-                Karama, Dubai, UAE<br />
-                P.O. Box: 231331
+                H.No.21, Kuttiyil House,<br />
+                Sundaragiri Road, Kalamassery,<br />
+                Ernakulam, Kerala – 683104
               </address>
               <p className="font-sans text-[0.82rem] text-[var(--text-secondary)] mb-4">
                 Mon–Sat: 8:00 AM – 6:00 PM
@@ -171,13 +169,13 @@ export function Footer() {
         <div className="px-[var(--section-pad-x)] py-6 pb-28 md:pb-8">
           <div className="max-w-[var(--container-max)] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-center md:text-left">
             <p className="font-sans text-[0.8rem] font-medium text-[var(--text-secondary)]">
-              © 2026 Aztech General Trading LLC. All Rights Reserved.
+              © 2026 Aztech LED Screens Private Limited. All Rights Reserved.
             </p>
             <p className="font-sans text-[0.75rem] font-medium text-[var(--text-secondary)] hidden lg:block">
-              LED Screen Dubai | Digital Signage UAE | Outdoor LED Supplier Dubai
+              LED Screen Kerala | Digital Signage Kochi | Outdoor LED Ernakulam
             </p>
             <p className="font-sans text-[0.75rem] font-medium text-[var(--text-secondary)]/70">
-              Designed with precision in Dubai
+              Dubai Expertise · Kerala Service
             </p>
           </div>
         </div>

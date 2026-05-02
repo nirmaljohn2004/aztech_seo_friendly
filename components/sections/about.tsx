@@ -20,7 +20,7 @@ export function AboutSection() {
       ref={ref}
       id="about" 
       className={`section-padding bg-[var(--bg-primary)] reveal-section ${isVisible ? "visible" : ""}`}
-      aria-label="About Aztech LED General Trading LLC"
+      aria-label="About Aztech LED Screens Private Limited"
     >
       <div className="max-w-[var(--container-max)] mx-auto">
         <div className="grid lg:grid-cols-[52%_48%] gap-12 lg:gap-20 items-start">
@@ -29,21 +29,21 @@ export function AboutSection() {
             <p className="eyebrow mb-3">WHO WE ARE</p>
             
             <h2 className="font-serif text-[clamp(2rem,3.5vw,3rem)] font-bold leading-[1.15] text-[var(--text-primary)] mb-5">
-              Two Decades Of<br />Illuminating The UAE
+              Dubai&apos;s Legacy,<br />Now In Kerala
             </h2>
             
             <div className="w-12 h-[2px] bg-[var(--accent)] mb-5" aria-hidden="true" />
             
             <p className="font-sans text-[1.1rem] font-light leading-[1.8] text-[var(--text-secondary)] mb-5">
-              Aztech General Trading LLC has been illuminating the UAE for over 20 years. From our base in Karama, Dubai, we have grown from architectural lighting specialists into one of the UAE&apos;s most comprehensive LED display companies — trusted by government ministries, international hotel chains, hypermarkets, and stadiums alike.
+              After establishing ourselves as a well-known industry leader in Dubai for over 20 years, Aztech LED is thrilled to launch our operations in Kerala for the very first time. From our roots in Karama, Dubai — where we served government ministries, international hotel chains, and stadiums — we are now delivering that exact same world-class standard right here in Ernakulam, Kerala.
             </p>
             
             <p className="font-sans text-[1rem] leading-[1.75] text-[var(--text-body)] mb-5">
-              We began by exploring light — projecting it onto building facades, bridges, and hotel exteriors, turning architecture into landmarks. That obsession with light quality and precision carried into everything we do today: indoor LED screens that demand attention, outdoor displays that withstand the UAE summer, and custom-built LED installations that no one else can deliver.
+              We began by projecting light onto building facades, bridges, and hotel exteriors — turning architecture into landmarks across the UAE. That obsession with quality and precision carries into everything we do today: indoor LED screens that command attention, outdoor displays built for Kerala&apos;s climate, and custom installations that no one else can deliver.
             </p>
             
             <p className="font-sans text-[1rem] leading-[1.75] text-[var(--text-body)] mb-6">
-              Unlike resellers, we maintain full in-house capability. Our team designs, fabricates, installs, and services every project from start to finish. No subcontractors. No finger-pointing. Just accountable, professional service — backed by a large UAE stock that means your project starts when you need it to.
+              Unlike resellers, we maintain full in-house capability. Our team designs, fabricates, installs, and services every project from start to finish. No subcontractors. No finger-pointing. Just accountable, professional service — backed by our direct Dubai supply chain that keeps your project on schedule.
             </p>
             
             <a 
@@ -70,7 +70,7 @@ export function AboutSection() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
               <div className="absolute top-4 right-4 bg-[var(--accent)] text-white font-sans text-[0.7rem] font-medium px-[10px] py-1 rounded-[2px]">
-                Est. Dubai, UAE
+                Dubai Expertise · Kerala Presence
               </div>
             </div>
             

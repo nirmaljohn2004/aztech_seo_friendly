@@ -5,8 +5,8 @@ import { Check } from "lucide-react"
 
 const trustBadges = [
   "In-house installation team",
-  "Large stock - fast delivery",
-  "20+ years UAE experience",
+  "Fast delivery across Kerala",
+  "20+ years Dubai experience",
 ]
 
 export function HeroSection() {
@@ -40,7 +40,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <div ref={sectionRef} id="home" className="relative z-10" aria-label="Aztech LED - Dubai LED Screen Supplier">
+    <div ref={sectionRef} id="home" className="relative z-10" aria-label="Aztech LED Screens - LED Screen Supplier in Kerala">
       <div className="relative min-h-[calc(100vh-36px)] w-full overflow-hidden bg-[var(--bg-dark)]">
         <video
           ref={videoRef}
@@ -67,7 +67,7 @@ export function HeroSection() {
               <div className="hero-item mb-5 flex items-center gap-4" style={{ "--hero-delay": "0ms" } as React.CSSProperties}>
                 <span className="h-px w-12 bg-[var(--accent-dark-visible)]" aria-hidden="true" />
                 <p className="font-sans text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-white/72">
-                  DUBAI&apos;S TRUSTED LED SPECIALISTS
+                  DUBAI&apos;S #1 LED EXPERTS, NOW IN KERALA
                 </p>
               </div>
               <h1
@@ -81,7 +81,7 @@ export function HeroSection() {
                 className="font-sans hero-item mb-7 max-w-[525px] font-light leading-[1.72] text-white/76 lg:mb-8"
                 style={{ fontSize: "clamp(0.98rem,0.98vw,1.06rem)", "--hero-delay": "200ms" } as React.CSSProperties}
               >
-                From high-resolution indoor displays to weather-proof outdoor billboards - Aztech has been illuminating UAE&apos;s most iconic spaces for over 20 years. Trusted by ADNOC, RTA, Dubai Cricket Stadium and 500+ clients.
+                For over 20 years, we&apos;ve illuminated Dubai&apos;s iconic landmarks and served 500+ premium clients across the Middle East. Now, for the first time ever, Aztech brings our world-class LED display expertise directly to Kerala.
               </p>
               <div className="flex hero-item mb-7 flex-wrap gap-4 lg:mb-8" style={{ "--hero-delay": "300ms" } as React.CSSProperties}>
                 <a href="#contact" className="inline-flex min-h-12 min-w-[208px] items-center justify-center rounded-[var(--radius-sm)] bg-[var(--accent)] px-7 py-3.5 font-sans text-sm font-semibold text-white shadow-[0_14px_38px_rgba(28,74,151,0.28)] transition-all duration-200 hover:-translate-y-px hover:bg-[var(--accent-hover)] hover:shadow-[0_18px_44px_rgba(28,74,151,0.34)]">
