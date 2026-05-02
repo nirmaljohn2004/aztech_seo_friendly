@@ -137,7 +137,7 @@ export function ContactSection() {
           <div>
             {/* Company card */}
             <div className="bg-white p-7 rounded-[var(--radius-md)] border border-[var(--border-light)] mb-6">
-              <div className="flex flex-col mb-6">
+              <div className="flex flex-col mb-5">
                 <div className="flex items-baseline gap-0.5">
                   <span className="font-serif text-[26px] font-bold text-[var(--text-primary)]">AZTECH</span>
                   <span className="font-sans text-[14px] font-semibold text-[var(--accent)]"> LED</span>
@@ -146,7 +146,24 @@ export function ContactSection() {
                   Aztech LED Screens Private Limited
                 </span>
               </div>
-              
+
+              {/* Corporate Identity */}
+              <div className="flex flex-col gap-2 mb-5 p-4 bg-[var(--bg-secondary)] rounded-[var(--radius-sm)] border border-[var(--border-light)]">
+                <div className="flex items-start gap-2">
+                  <span className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[var(--accent)] whitespace-nowrap mt-0.5">Head Office</span>
+                  <span className="font-sans text-[0.82rem] text-[var(--text-body)] leading-[1.5]">
+                    Aztech General Trading LLC, Dubai, UAE
+                  </span>
+                </div>
+                <div className="h-px bg-[var(--border-light)]" />
+                <div className="flex items-start gap-2">
+                  <span className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[var(--copper)] whitespace-nowrap mt-0.5">Sister Concern</span>
+                  <span className="font-sans text-[0.82rem] text-[var(--text-body)] leading-[1.5]">
+                    Lamps Plus Electronics Trading LLC
+                  </span>
+                </div>
+              </div>
+
               <div className="flex flex-col gap-4">
                 <a href="https://www.google.com/maps/search/?api=1&query=10.0501,76.3108" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
                   <MapPin className="w-[18px] h-[18px] text-[var(--accent-mid)] mt-1 shrink-0" aria-hidden="true" />

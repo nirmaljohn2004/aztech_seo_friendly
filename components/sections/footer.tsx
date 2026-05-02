@@ -167,16 +167,25 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="bg-[var(--bg-primary)] border-t border-[var(--border-light)]">
         <div className="px-[var(--section-pad-x)] py-6 pb-28 md:pb-8">
-          <div className="max-w-[var(--container-max)] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-center md:text-left">
-            <p className="font-sans text-[0.8rem] font-medium text-[var(--text-secondary)]">
-              © 2026 Aztech LED Screens Private Limited. All Rights Reserved.
-            </p>
-            <p className="font-sans text-[0.75rem] font-medium text-[var(--text-secondary)] hidden lg:block">
-              LED Screen Kerala | Digital Signage Kochi | Outdoor LED Ernakulam
-            </p>
-            <p className="font-sans text-[0.75rem] font-medium text-[var(--text-secondary)]/70">
-              Dubai Expertise · Kerala Service
-            </p>
+          <div className="max-w-[var(--container-max)] mx-auto flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 text-center md:text-left">
+            <div className="flex flex-col gap-1.5">
+              <p className="font-sans text-[0.8rem] font-medium text-[var(--text-secondary)]">
+                © 2026 Aztech LED Screens Private Limited. All Rights Reserved.
+              </p>
+              <p className="font-sans text-[0.75rem] text-[var(--text-secondary)]/70 hidden sm:block">
+                Head Office: <span className="font-medium text-[var(--text-secondary)]">Aztech General Trading LLC, Dubai</span>
+                <span className="mx-1.5 text-white/20">·</span>
+                Sister Concern: <span className="font-medium text-[var(--text-secondary)]">Lamps Plus Electronics Trading LLC</span>
+              </p>
+            </div>
+            <div className="flex flex-col gap-1.5 lg:text-right">
+              <p className="font-sans text-[0.75rem] font-medium text-[var(--text-secondary)] hidden lg:block">
+                LED Screen Kerala | Digital Signage Kochi | Outdoor LED Ernakulam
+              </p>
+              <p className="font-sans text-[0.75rem] font-medium text-[var(--text-secondary)]/70">
+                Dubai Expertise · Kerala Service
+              </p>
+            </div>
           </div>
         </div>
       </div>
