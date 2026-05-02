@@ -87,35 +87,24 @@ export function ContactSection() {
       return
     }
 
-    // Build email content
-    const subject = `Contact Form Submission from ${data.name}`
-    const body = `
-Name: ${data.name}
-Company: ${data.company || 'N/A'}
-Email: ${data.email}
-Phone: ${data.phone}
-Service Required: ${data.service}
-Project Location: ${data.location || 'N/A'}
-Approximate Budget: ${data.budget}
-How did you hear about us: ${data.source || 'N/A'}
-
-Project Details / Message:
-${data.message || 'No message provided'}
-    `.trim()
-
-    // Encode for URL
-    const encodedSubject = encodeURIComponent(subject)
-    const encodedBody = encodeURIComponent(body)
-
-    // Build Gmail compose URL
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=nirmaljohnrappakaran28012004@gmail.com&su=${encodedSubject}&body=${encodedBody}`
-
-    // Open Gmail in new tab
-    window.open(gmailUrl, '_blank')
-
-    // Show success message
-    setIsSubmitted(true)
-    setIsSubmitting(false)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      const json = await res.json()
+      if (!res.ok) {
+        setErrorMsg(json.error ?? 'Failed to send. Please try again.')
+        setIsSubmitting(false)
+        return
+      }
+      setIsSubmitted(true)
+    } catch {
+      setErrorMsg('Network error. Please check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -162,10 +151,10 @@ ${data.message || 'No message provided'}
                   </address>
                 </a>
                 
-                <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-3 group">
+                <a href="tel:+917356780866" className="flex items-center gap-3 group">
                   <Phone className="w-[18px] h-[18px] text-[var(--accent-mid)] shrink-0" aria-hidden="true" />
                   <span className="font-sans text-[0.9rem] text-[var(--text-body)] group-hover:text-[var(--accent)] transition-colors">
-                    +91 XXXXX XXXXX
+                    +91 73567 80866
                   </span>
                 </a>
                 
@@ -178,10 +167,10 @@ ${data.message || 'No message provided'}
                   </span>
                 </a>
                 
-                <a href="mailto:info@ledscreenuae.com" className="flex items-center gap-3 group">
+                <a href="mailto:sales@az-tech.ae" className="flex items-center gap-3 group">
                   <Mail className="w-[18px] h-[18px] text-[var(--accent-mid)] shrink-0" aria-hidden="true" />
                   <span className="font-sans text-[0.9rem] text-[var(--text-body)] group-hover:text-[var(--accent)] transition-colors">
-                    info@ledscreenuae.com
+                    sales@az-tech.ae
                   </span>
                 </a>
                 
@@ -238,10 +227,10 @@ ${data.message || 'No message provided'}
                   <CheckCircle className="w-8 h-8 text-[var(--success)]" />
                 </div>
                 <h3 className="font-sans text-[1.2rem] font-semibold text-[var(--text-primary)] mb-2">
-                  Gmail Opened!
+                   Enquiry Sent!
                 </h3>
                 <p className="font-sans text-[1rem] text-[var(--text-body)] mb-6">
-                  Gmail has been opened in a new tab with your enquiry details. Please review and send the email.
+                  Your enquiry has been sent to our team at sales@az-tech.ae. We&apos;ll get back to you within 24 hours.
                 </p>
                 <a 
                   href="#projects" 

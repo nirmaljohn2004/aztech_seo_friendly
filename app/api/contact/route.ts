@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? 'info@ledscreenuae.com'
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL ?? 'enquiries@ledscreenuae.com'
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? 'sales@az-tech.ae'
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL ?? 'enquiries@az-tech.ae'
 
 function escapeHtml(value: unknown) {
   return String(value ?? '')

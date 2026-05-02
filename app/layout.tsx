@@ -110,7 +110,7 @@ export default function RootLayout({
               "image": "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp",
               "@id": "https://aztech-seo-friendly.vercel.app/",
               "url": "https://aztech-seo-friendly.vercel.app/",
-              "telephone": "+91 95440 80705",
+              "telephone": "+91 73567 80866",
               "priceRange": "₹50,000 - ₹10,00,000+",
               "address": {
                 "@type": "PostalAddress",
