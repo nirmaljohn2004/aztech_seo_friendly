@@ -87,24 +87,30 @@ export function ContactSection() {
       return
     }
 
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
-      const json = await res.json()
-      if (!res.ok) {
-        setErrorMsg(json.error ?? 'Failed to send. Please try again.')
-        setIsSubmitting(false)
-        return
-      }
-      setIsSubmitted(true)
-    } catch {
-      setErrorMsg('Network error. Please check your connection and try again.')
-    } finally {
-      setIsSubmitting(false)
-    }
+    const subject = `New LED Enquiry: ${data.service} — ${data.name}${data.company ? ` (${data.company})` : ''}`
+    const body = [
+      `Name: ${data.name}`,
+      data.company ? `Company: ${data.company}` : '',
+      `Email: ${data.email}`,
+      `Phone / WhatsApp: ${data.phone}`,
+      `Service Required: ${data.service}`,
+      data.location ? `Project Location: ${data.location}` : '',
+      `Approximate Budget: ${data.budget}`,
+      data.source ? `How They Heard: ${data.source}` : '',
+      '',
+      'Project Details / Message:',
+      data.message || 'No message provided',
+    ].filter(Boolean).join('\n')
+
+    const gmailUrl =
+      `https://mail.google.com/mail/?view=cm&fs=1` +
+      `&to=${encodeURIComponent('sales@az-tech.ae')}` +
+      `&su=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`
+
+    window.open(gmailUrl, '_blank')
+    setIsSubmitted(true)
+    setIsSubmitting(false)
   }
 
   return (
@@ -227,10 +233,10 @@ export function ContactSection() {
                   <CheckCircle className="w-8 h-8 text-[var(--success)]" />
                 </div>
                 <h3 className="font-sans text-[1.2rem] font-semibold text-[var(--text-primary)] mb-2">
-                   Enquiry Sent!
+                  Gmail Opened!
                 </h3>
                 <p className="font-sans text-[1rem] text-[var(--text-body)] mb-6">
-                  Your enquiry has been sent to our team at sales@az-tech.ae. We&apos;ll get back to you within 24 hours.
+                  A Gmail compose window has opened with your enquiry pre-filled. Just hit <strong>Send</strong> and our team at <strong>sales@az-tech.ae</strong> will get back to you within 24 hours.
                 </p>
                 <a 
                   href="#projects" 
