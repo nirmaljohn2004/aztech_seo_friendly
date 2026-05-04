@@ -6,7 +6,7 @@ export const siteConfig = {
   name: "Aztech LED",
   title: "Aztech LED | #1 LED Screen Supplier in India",
   companyName: "Aztech LED Screens Private Limited",
-  url: "https://aztechledscreens.com", // Change to the final .com domain later
+  url: "https://aztechledscreens.com",
   ogImage: "/images/hero_led_wall_1774782256673.png",
   description: "Aztech LED — Dubai's trusted LED screen supplier for 20+ years. Indoor LED displays, outdoor billboards, transparent LED, video walls & custom installations. Trusted by ADNOC, RTA, Dubai Mall. Get a free quote today.",
   keywords: [
