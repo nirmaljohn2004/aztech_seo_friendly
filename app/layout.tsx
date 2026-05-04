@@ -41,14 +41,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://aztech-seo-friendly.vercel.app/",
+    url: "https://aztechledscreens.com/",
     title: "Aztech LED | #1 LED Screen Supplier in India",
     description: "India’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor, transparent LED screens & video walls. Serving all of India.",
     siteName: "Aztech LED Screens Private Limited",
     locale: "en_IN",
     images: [
       {
-        url: "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp",
+        url: "https://aztechledscreens.com/images/hero_led_wall_1774782256673.webp",
         width: 1200,
         height: 800,
         alt: "Large LED video wall display in a modern Dubai commercial space",
@@ -59,10 +59,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aztech LED | #1 LED Screen Supplier in India",
     description: "India’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor & specialty LED screens. 500+ clients.",
-    images: ["https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp"],
+    images: ["https://aztechledscreens.com/images/hero_led_wall_1774782256673.webp"],
   },
   alternates: {
-    canonical: "https://aztech-seo-friendly.vercel.app/",
+    canonical: "https://aztechledscreens.com/",
   },
   other: {
     'geo.region': 'IN-KL',
@@ -107,9 +107,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Aztech LED Screens Private Limited",
-              "image": "https://aztech-seo-friendly.vercel.app/images/hero_led_wall_1774782256673.webp",
-              "@id": "https://aztech-seo-friendly.vercel.app/",
-              "url": "https://aztech-seo-friendly.vercel.app/",
+              "image": "https://aztechledscreens.com/images/hero_led_wall_1774782256673.webp",
+              "@id": "https://aztechledscreens.com/",
+              "url": "https://aztechledscreens.com/",
               "telephone": "+91 73567 80866",
               "priceRange": "₹50,000 - ₹10,00,000+",
               "address": {
@@ -146,14 +146,14 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Aztech LED",
-              "url": "https://aztech-seo-friendly.vercel.app/",
+              "url": "https://aztechledscreens.com/",
               "description": "India’s #1 LED screen supplier. Indoor, outdoor, specialty LED displays and video walls.",
               "publisher": {
                 "@type": "Organization",
                 "name": "Aztech LED Screens Private Limited",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://aztech-seo-friendly.vercel.app/icon.svg",
+                  "url": "https://aztechledscreens.com/icon.svg",
                   "width": 512,
                   "height": 512
                 }
@@ -169,11 +169,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aztech-seo-friendly.vercel.app/" },
-                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://aztech-seo-friendly.vercel.app/#products" },
-                { "@type": "ListItem", "position": 3, "name": "Solutions", "item": "https://aztech-seo-friendly.vercel.app/#solutions" },
-                { "@type": "ListItem", "position": 4, "name": "Projects", "item": "https://aztech-seo-friendly.vercel.app/#projects" },
-                { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://aztech-seo-friendly.vercel.app/#contact" }
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aztechledscreens.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://aztechledscreens.com/#products" },
+                { "@type": "ListItem", "position": 3, "name": "Solutions", "item": "https://aztechledscreens.com/#solutions" },
+                { "@type": "ListItem", "position": 4, "name": "Projects", "item": "https://aztechledscreens.com/#projects" },
+                { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://aztechledscreens.com/#contact" }
               ]
             })
           }}

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://aztech-seo-friendly.vercel.app/sitemap.xml',
+    sitemap: 'https://aztechledscreens.com/sitemap.xml',
   }
 }

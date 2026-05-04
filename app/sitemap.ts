@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const BASE = 'https://aztech-seo-friendly.vercel.app'
+  const BASE = 'https://aztechledscreens.com'
   const now = new Date('2026-04-23')
 
   return [

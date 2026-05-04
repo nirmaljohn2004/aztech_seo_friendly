@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(slug)
   if (!post) return {}
 
-  const BASE = 'https://aztech-seo-friendly.vercel.app'
+  const BASE = 'https://aztechledscreens.com'
 
   return {
     title: post.metaTitle,
@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPost(slug)
   if (!post) notFound()
 
-  const BASE = 'https://aztech-seo-friendly.vercel.app'
+  const BASE = 'https://aztechledscreens.com'
 
   // JSON-LD Article schema
   const articleSchema = {
